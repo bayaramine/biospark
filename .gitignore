@@ -10,3 +10,7 @@ Thumbs.db
 venv/
 .venv/
 instance/
+
+# Personal files — do not publish
+CV.pdf
+portrait.jpg

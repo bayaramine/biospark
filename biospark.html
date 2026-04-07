@@ -4,7 +4,7 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>BioSpark — Mohamed Amine BAYAR, PhD</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500&family=Outfit:wght@300;400;500;600&family=Noto+Sans+Arabic:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 <style>
   :root {
     --bg: #050d1a;
@@ -30,6 +30,38 @@
     overflow-x: hidden;
     cursor: default;
   }
+
+  /* Arabic font */
+  [lang="ar"] body,
+  [lang="ar"] p,
+  [lang="ar"] h1,
+  [lang="ar"] h2,
+  [lang="ar"] h3,
+  [lang="ar"] .hero-tagline,
+  [lang="ar"] .about-text p,
+  [lang="ar"] .service-desc,
+  [lang="ar"] .contact-sub {
+    font-family: 'Noto Sans Arabic', 'Outfit', sans-serif;
+  }
+
+  /* RTL support */
+  [lang="ar"] { direction: rtl; text-align: right; }
+  [lang="ar"] nav { flex-direction: row-reverse; }
+  [lang="ar"] .nav-links { flex-direction: row-reverse; }
+  [lang="ar"] .section-label { flex-direction: row-reverse; }
+  [lang="ar"] .section-label::after { margin-left: 0; margin-right: 0; margin-left: 1rem; }
+  [lang="ar"] .section-label::before {
+    content: '';
+    display: block; width: 40px; height: 1px;
+    background: var(--accent); opacity: 0.4;
+  }
+  [lang="ar"] .section-label::after { display: none; }
+  [lang="ar"] #hero { align-items: flex-end; }
+  [lang="ar"] .hero-line { background: linear-gradient(270deg, var(--accent), transparent); }
+  [lang="ar"] .hero-badge { right: auto; left: 4rem; }
+  [lang="ar"] .about-grid { direction: rtl; }
+  [lang="ar"] .hero-cta { flex-direction: row-reverse; }
+  [lang="ar"] .social-links { direction: rtl; }
 
   /* === BACKGROUND === */
   .bg-canvas {
@@ -227,8 +259,7 @@
     border-radius: 50%;
     background: var(--card);
     backdrop-filter: blur(10px);
-    animation: rotate 20s linear infinite;
-    opacity: 0; animation: fadeIn 1s ease 1.2s forwards, float 4s ease-in-out 2s infinite;
+    opacity: 1; animation: float 4s ease-in-out infinite;
   }
 
   .hero-badge-inner {
@@ -459,6 +490,7 @@
   .social-links {
     display: flex; justify-content: center; gap: 1.5rem;
     margin-top: 2rem;
+    flex-wrap: wrap;
   }
 
   .social-link {
@@ -548,26 +580,27 @@
   <div class="lang-switcher">
     <button class="lang-btn active" onclick="setLang('en')">EN</button>
     <button class="lang-btn" onclick="setLang('fr')">FR</button>
+    <button class="lang-btn" onclick="setLang('ar')">AR</button>
   </div>
 </nav>
 
 <!-- HERO -->
 <div style="position:relative;z-index:1;">
 <section id="hero">
-  <div class="hero-tag" data-i18n="hero.tag">Biostatistics · Clinical Trials · AI</div>
+  <div class="hero-tag" data-i18n="hero.tag">Biostatistics · Clinical Trials · Oncology &amp; Hematology · AI/ML</div>
   <h1 class="hero-name">Mohamed Amine <em>BAYAR</em></h1>
-  <div class="hero-title">PhD — Independent Consultant</div>
+  <div class="hero-title" data-i18n="hero.title">PhD — Independent Consultant</div>
   <div class="hero-line"></div>
-  <p class="hero-tagline" data-i18n="hero.tagline">"Turning clinical data into actionable insights"</p>
+  <p class="hero-tagline" data-i18n="hero.tagline">"Bridging clinical trials and artificial intelligence."</p>
   <div class="hero-cta">
     <a href="#services" class="btn-primary" data-i18n="hero.cta1">Explore Services</a>
     <a href="#contact" class="btn-outline" data-i18n="hero.cta2">Get in Touch</a>
   </div>
 
-  <div class="hero-badge" style="animation: float 4s ease-in-out infinite; opacity:1;">
+  <div class="hero-badge">
     <div class="hero-badge-inner">
       <div class="badge-num">PhD</div>
-      <div class="badge-label" data-i18n="hero.badge">Expert</div>
+      <div class="badge-label" data-i18n="hero.badge">Biostats &amp; AI</div>
     </div>
   </div>
 </section>
@@ -578,29 +611,29 @@
 <!-- ABOUT -->
 <section id="about">
   <div class="section-label" data-i18n="about.label">About</div>
-  <h2 class="section-title reveal" data-i18n="about.title">Data scientist at the <em>intersection</em><br>of biology and intelligence</h2>
+  <h2 class="section-title reveal" data-i18n="about.title">Biostatistician at the <em>intersection</em><br>of clinical trials and AI/ML</h2>
   <div class="about-grid">
     <div class="about-text reveal">
-      <p data-i18n="about.p1">With a PhD and years of hands-on experience in clinical research, I bridge the gap between complex biostatistical methods and real-world clinical decision-making.</p>
-      <p data-i18n="about.p2">I specialize in designing and analyzing clinical trials across all phases, applying cutting-edge data science and artificial intelligence to accelerate drug development and improve patient outcomes.</p>
-      <p data-i18n="about.p3">Working with pharmaceutical companies, CROs, and academic research centers, I deliver rigorous, regulatory-compliant statistical analyses with a pragmatic, results-driven approach.</p>
+      <p data-i18n="about.p1">PhD-trained biostatistician with 13+ years of experience across the full clinical development lifecycle — from Phase I dose escalation to Phase III pivotal trials. My primary expertise lies in oncology and hematology, though I bring rigorous methodology and a results-driven approach to any therapeutic area.</p>
+      <p data-i18n="about.p2">I have contributed to landmark drug development programs at Johnson &amp; Johnson (Multiple Myeloma bispecifics, a trispecific, and CAR-T therapies), Novartis (Scemblix/asciminib for CML, supporting FDA and EMA approval), and Gustave Roussy, Europe's largest cancer center. Across these roles, I have led trial design, SAP development, regulatory interactions, and final study reporting to the highest scientific and regulatory standards.</p>
+      <p data-i18n="about.p3">Beyond classical biostatistics, I apply machine learning and AI to clinical and genomic data. I am the co-inventor of a patent using ML to predict prognosis in Triple Negative Breast Cancer, and an author of 15+ peer-reviewed publications (1,200+ citations) in journals including the Annals of Oncology, JCO, and Statistics in Medicine.</p>
     </div>
     <div class="about-stats reveal">
       <div class="stat-card">
-        <div class="stat-num">15+</div>
-        <div class="stat-desc" data-i18n="stat.trials">Clinical Trials</div>
+        <div class="stat-num">13+</div>
+        <div class="stat-desc" data-i18n="stat.years">Years of Experience</div>
       </div>
       <div class="stat-card">
         <div class="stat-num">I–IV</div>
         <div class="stat-desc" data-i18n="stat.phases">Trial Phases</div>
       </div>
       <div class="stat-card">
-        <div class="stat-num">AI</div>
-        <div class="stat-desc" data-i18n="stat.driven">Driven Analysis</div>
+        <div class="stat-num">15+</div>
+        <div class="stat-desc" data-i18n="stat.publications">Publications</div>
       </div>
       <div class="stat-card">
-        <div class="stat-num">ICH</div>
-        <div class="stat-desc" data-i18n="stat.compliant">E9 Compliant</div>
+        <div class="stat-num">1,200+</div>
+        <div class="stat-desc" data-i18n="stat.citations">Citations</div>
       </div>
     </div>
   </div>
@@ -662,7 +695,7 @@
 <section id="contact">
   <div class="section-label" data-i18n="contact.label">Contact</div>
   <h2 class="section-title reveal" data-i18n="contact.title">Let's work <em>together</em></h2>
-  <p class="reveal" style="color:var(--muted);max-width:500px;margin:0 auto 0;line-height:1.8;" data-i18n="contact.sub">Available for freelance consulting missions, collaboration on clinical studies, and research projects.</p>
+  <p class="reveal contact-sub" style="color:var(--muted);max-width:500px;margin:0 auto 0;line-height:1.8;" data-i18n="contact.sub">Available for freelance consulting missions, collaboration on clinical studies, and research projects.</p>
 
   <div class="contact-box reveal">
     <a href="mailto:bayar.amine@gmail.com" class="contact-email">bayar.amine@gmail.com</a>
@@ -671,6 +704,14 @@
       <a href="https://www.linkedin.com/in/mohamed-amine-bayar-51166a94/" target="_blank" class="social-link">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
         LinkedIn
+      </a>
+      <a href="https://github.com/bayaramine" target="_blank" class="social-link">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        GitHub
+      </a>
+      <a href="https://scholar.google.com/citations?user=PLACEHOLDER" target="_blank" class="social-link">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 10a8 8 0 0 1 7.162 3.44L24 9.5z"/></svg>
+        Google Scholar
       </a>
     </div>
   </div>
@@ -689,29 +730,30 @@ const translations = {
     'nav.about': 'About',
     'nav.services': 'Services',
     'nav.contact': 'Contact',
-    'hero.tag': 'Biostatistics · Clinical Trials · AI',
-    'hero.tagline': '"Turning clinical data into actionable insights"',
+    'hero.tag': 'Biostatistics · Clinical Trials · Oncology &amp; Hematology · AI/ML',
+    'hero.title': 'PhD — Independent Consultant',
+    'hero.tagline': '"Bridging clinical trials and artificial intelligence."',
     'hero.cta1': 'Explore Services',
     'hero.cta2': 'Get in Touch',
-    'hero.badge': 'Expert',
+    'hero.badge': 'Biostats &amp; AI',
     'about.label': 'About',
-    'about.title': 'Data scientist at the <em>intersection</em><br>of biology and intelligence',
-    'about.p1': 'With a PhD and years of hands-on experience in clinical research, I bridge the gap between complex biostatistical methods and real-world clinical decision-making.',
-    'about.p2': 'I specialize in designing and analyzing clinical trials across all phases, applying cutting-edge data science and artificial intelligence to accelerate drug development and improve patient outcomes.',
-    'about.p3': 'Working with pharmaceutical companies, CROs, and academic research centers, I deliver rigorous, regulatory-compliant statistical analyses with a pragmatic, results-driven approach.',
-    'stat.trials': 'Clinical Trials',
+    'about.title': 'Biostatistician at the <em>intersection</em><br>of clinical trials and AI/ML',
+    'about.p1': 'PhD-trained biostatistician with 13+ years of experience across the full clinical development lifecycle — from Phase I dose escalation to Phase III pivotal trials. My primary expertise lies in oncology and hematology, though I bring rigorous methodology and a results-driven approach to any therapeutic area.',
+    'about.p2': 'I have contributed to landmark drug development programs at Johnson &amp; Johnson (Multiple Myeloma bispecifics, a trispecific, and CAR-T therapies), Novartis (Scemblix/asciminib for CML, supporting FDA and EMA approval), and Gustave Roussy, Europe\'s largest cancer center. Across these roles, I have led trial design, SAP development, regulatory interactions, and final study reporting to the highest scientific and regulatory standards.',
+    'about.p3': 'Beyond classical biostatistics, I apply machine learning and AI to clinical and genomic data. I am the co-inventor of a patent using ML to predict prognosis in Triple Negative Breast Cancer, and an author of 15+ peer-reviewed publications (1,200+ citations) in journals including the Annals of Oncology, JCO, and Statistics in Medicine.',
+    'stat.years': 'Years of Experience',
     'stat.phases': 'Trial Phases',
-    'stat.driven': 'Driven Analysis',
-    'stat.compliant': 'E9 Compliant',
+    'stat.publications': 'Publications',
+    'stat.citations': 'Citations',
     'services.label': 'Services',
     'services.title': 'Areas of <em>expertise</em>',
-    's1.title': 'Biostatistics & Statistical Analysis',
+    's1.title': 'Biostatistics &amp; Statistical Analysis',
     's1.desc': 'Design of experiments, sample size calculations, survival analysis, mixed models, and regulatory-grade statistical reporting (SAP, TLFs).',
     's2.title': 'Clinical Trials (Phase I–IV)',
     's2.desc': 'End-to-end statistical support for clinical trials — protocol design, randomization, interim analyses, DSMB support, and final study reporting.',
     's3.title': 'Data Science',
     's3.desc': 'Advanced analytics on clinical and real-world data — data wrangling, visualization, predictive modeling, and reproducible pipelines.',
-    's4.title': 'Artificial Intelligence & Machine Learning',
+    's4.title': 'Artificial Intelligence &amp; Machine Learning',
     's4.desc': 'Application of ML and AI to clinical data — patient stratification, biomarker discovery, NLP on clinical notes, and predictive models for trial outcomes.',
     'contact.label': 'Contact',
     'contact.title': 'Let\'s work <em>together</em>',
@@ -723,35 +765,71 @@ const translations = {
     'nav.about': 'À propos',
     'nav.services': 'Services',
     'nav.contact': 'Contact',
-    'hero.tag': 'Biostatistiques · Essais Cliniques · IA',
-    'hero.tagline': '« Transformer les données cliniques en décisions éclairées »',
+    'hero.tag': 'Biostatistiques · Essais Cliniques · Oncologie &amp; Hématologie · IA/ML',
+    'hero.title': 'Docteur — Consultant Indépendant',
+    'hero.tagline': '« À l\'intersection des essais cliniques et de l\'intelligence artificielle. »',
     'hero.cta1': 'Voir les services',
     'hero.cta2': 'Me contacter',
-    'hero.badge': 'Expert',
+    'hero.badge': 'Biostats &amp; IA',
     'about.label': 'À propos',
-    'about.title': 'Data scientist à l\'<em>intersection</em><br>de la biologie et de l\'intelligence',
-    'about.p1': 'Titulaire d\'un doctorat et fort d\'une expérience approfondie en recherche clinique, je fais le lien entre les méthodes biostatistiques complexes et la prise de décision clinique en situation réelle.',
-    'about.p2': 'Je suis spécialisé dans la conception et l\'analyse des essais cliniques de toutes phases, en appliquant la data science et l\'intelligence artificielle pour accélérer le développement des médicaments.',
-    'about.p3': 'En collaboration avec des entreprises pharmaceutiques, des CRO et des centres de recherche académique, je livre des analyses statistiques rigoureuses et conformes aux exigences réglementaires.',
-    'stat.trials': 'Essais cliniques',
+    'about.title': 'Biostatisticien à l\'<em>intersection</em><br>des essais cliniques et de l\'IA/ML',
+    'about.p1': 'Biostatisticien titulaire d\'un doctorat, avec plus de 13 ans d\'expérience sur l\'ensemble du cycle de développement clinique — de l\'escalade de dose en Phase I aux essais pivots de Phase III. Mon expertise principale porte sur l\'oncologie et l\'hématologie, mais j\'apporte une méthodologie rigoureuse et une approche orientée résultats à toute aire thérapeutique.',
+    'about.p2': 'J\'ai contribué à des programmes de développement médicamenteux de référence chez Johnson &amp; Johnson (bispecifiques, un trispécifique et thérapies CAR-T pour le myélome multiple), Novartis (Scemblix/asciminib pour la LMC, ayant soutenu les approbations FDA et EMA), et Gustave Roussy, le plus grand centre de lutte contre le cancer en Europe. Dans ces rôles, j\'ai dirigé la conception des essais, le développement des SAP, les interactions réglementaires et la rédaction des rapports d\'étude finaux selon les plus hauts standards scientifiques et réglementaires.',
+    'about.p3': 'Au-delà de la biostatistique classique, j\'applique le machine learning et l\'IA aux données cliniques et génomiques. Je suis co-inventeur d\'un brevet utilisant le ML pour prédire le pronostic dans le cancer du sein triple négatif, et auteur de plus de 15 publications évaluées par des pairs (plus de 1 200 citations) dans des revues telles que les Annals of Oncology, le JCO et Statistics in Medicine.',
+    'stat.years': 'Ans d\'expérience',
     'stat.phases': 'Phases d\'essais',
-    'stat.driven': 'Analyse par IA',
-    'stat.compliant': 'Conforme ICH E9',
+    'stat.publications': 'Publications',
+    'stat.citations': 'Citations',
     'services.label': 'Services',
     'services.title': 'Domaines d\'<em>expertise</em>',
-    's1.title': 'Biostatistiques & Analyse Statistique',
+    's1.title': 'Biostatistiques &amp; Analyse Statistique',
     's1.desc': 'Plan d\'expérience, calcul de taille d\'échantillon, analyse de survie, modèles mixtes et rapports statistiques réglementaires (SAP, TLFs).',
     's2.title': 'Essais Cliniques (Phase I–IV)',
     's2.desc': 'Accompagnement statistique complet des essais cliniques — conception du protocole, randomisation, analyses intermédiaires, support DSMB et rapport final.',
     's3.title': 'Data Science',
     's3.desc': 'Analyse avancée sur données cliniques et en vie réelle — traitement des données, visualisation, modélisation prédictive et pipelines reproductibles.',
-    's4.title': 'Intelligence Artificielle & Machine Learning',
+    's4.title': 'Intelligence Artificielle &amp; Machine Learning',
     's4.desc': 'Application du ML et de l\'IA aux données cliniques — stratification des patients, découverte de biomarqueurs, NLP sur notes cliniques et modèles prédictifs.',
     'contact.label': 'Contact',
     'contact.title': 'Travaillons <em>ensemble</em>',
     'contact.sub': 'Disponible pour des missions de conseil en freelance, des collaborations sur des études cliniques et des projets de recherche.',
     'contact.btn': 'Envoyer un message',
     'footer.copy': 'Tous droits réservés'
+  },
+  ar: {
+    'nav.about': 'نبذة عني',
+    'nav.services': 'الخدمات',
+    'nav.contact': 'تواصل',
+    'hero.tag': 'إحصاء حيوي · تجارب سريرية · أورام وأمراض الدم · الذكاء الاصطناعي',
+    'hero.title': 'دكتوراه — مستشار مستقل',
+    'hero.tagline': '«في تقاطع التجارب السريرية والذكاء الاصطناعي.»',
+    'hero.cta1': 'استعرض الخدمات',
+    'hero.cta2': 'تواصل معي',
+    'hero.badge': 'إحصاء وذكاء اصطناعي',
+    'about.label': 'نبذة عني',
+    'about.title': 'إحصائي حيوي عند <em>تقاطع</em><br>التجارب السريرية والذكاء الاصطناعي',
+    'about.p1': 'إحصائي حيوي حاصل على درجة الدكتوراه، بخبرة تمتد لأكثر من 13 عامًا على امتداد دورة التطوير السريري الكاملة — من تصاعد الجرعات في المرحلة الأولى إلى التجارب المحورية في المرحلة الثالثة. تتمحور خبرتي الرئيسية حول علم الأورام وأمراض الدم، غير أنني أقدم منهجية صارمة ونهجًا موجهًا نحو النتائج في أي مجال علاجي.',
+    'about.p2': 'أسهمت في برامج تطوير أدوية بارزة في شركة جونسون آند جونسون (عوامل ثنائية ومثلثة الخصوصية وعلاجات CAR-T لمرض المايلوما المتعددة)، وشركة نوفارتيس (Scemblix/أسيمينيب لسرطان الدم النخاعي المزمن، دعمًا لاعتمادات FDA وEMA)، ومركز غوستاف روسي، أكبر مركز لعلاج السرطان في أوروبا. في هذه الأدوار، قدت تصميم التجارب وتطوير خطط التحليل الإحصائي والتفاعلات التنظيمية وإعداد تقارير الدراسات النهائية وفق أعلى المعايير العلمية والتنظيمية.',
+    'about.p3': 'إلى جانب الإحصاء الحيوي الكلاسيكي، أطبّق تقنيات التعلم الآلي والذكاء الاصطناعي على البيانات السريرية والجينومية. أنا مشارك في اختراع براءة تستخدم التعلم الآلي للتنبؤ بالإنذار في سرطان الثدي سلبي الثلاثة، ومؤلف لأكثر من 15 ورقة بحثية محكّمة (أكثر من 1,200 استشهاد) في مجلات منها Annals of Oncology وJCO وStatistics in Medicine.',
+    'stat.years': 'سنوات الخبرة',
+    'stat.phases': 'مراحل التجارب',
+    'stat.publications': 'منشورات',
+    'stat.citations': 'استشهادات',
+    'services.label': 'الخدمات',
+    'services.title': 'مجالات <em>الخبرة</em>',
+    's1.title': 'الإحصاء الحيوي والتحليل الإحصائي',
+    's1.desc': 'تصميم التجارب، حساب حجم العينة، تحليل البقاء، النماذج المختلطة، والتقارير الإحصائية التنظيمية (SAP، TLFs).',
+    's2.title': 'التجارب السريرية (المرحلة I–IV)',
+    's2.desc': 'دعم إحصائي شامل للتجارب السريرية — تصميم البروتوكول، العشوائية، التحليلات الوسيطة، دعم DSMB، والتقرير النهائي.',
+    's3.title': 'علم البيانات',
+    's3.desc': 'تحليل متقدم للبيانات السريرية والواقعية — معالجة البيانات، التصور، النمذجة التنبؤية، وخطوط الأنابيب القابلة للتكرار.',
+    's4.title': 'الذكاء الاصطناعي والتعلم الآلي',
+    's4.desc': 'تطبيق التعلم الآلي والذكاء الاصطناعي على البيانات السريرية — تصنيف المرضى، اكتشاف المؤشرات الحيوية، معالجة اللغة الطبيعية على الملاحظات السريرية، والنماذج التنبؤية.',
+    'contact.label': 'تواصل',
+    'contact.title': 'لنعمل <em>معًا</em>',
+    'contact.sub': 'متاح لمهام الاستشارة المستقلة، والتعاون في الدراسات السريرية والمشاريع البحثية.',
+    'contact.btn': 'أرسل رسالة',
+    'footer.copy': 'جميع الحقوق محفوظة'
   }
 };
 
@@ -764,11 +842,13 @@ function setLang(lang) {
   });
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
-    if (translations[lang][key]) {
+    if (translations[lang] && translations[lang][key]) {
       el.innerHTML = translations[lang][key];
     }
   });
   document.documentElement.lang = lang;
+  // RTL for Arabic
+  document.documentElement.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
 }
 
 // === Scroll reveal ===
