@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+*.pyo
+.env
+flask_session/
+*.db
+.DS_Store
+Thumbs.db
+*.log
+venv/
+.venv/
+instance/
