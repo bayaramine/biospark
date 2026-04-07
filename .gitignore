@@ -11,6 +11,9 @@ venv/
 .venv/
 instance/
 
-# Personal files — do not publish
-CV.pdf
-portrait.jpg
+# Database
+biospark.db
+
+# Personal files — do not publish (root copies only)
+/CV.pdf
+/portrait.jpg

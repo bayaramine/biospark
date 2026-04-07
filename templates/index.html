@@ -1,0 +1,176 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<!-- HERO -->
+<div style="position:relative;z-index:1;">
+<section id="hero">
+  <div class="hero-tag" data-i18n="hero.tag">Biostatistics · Clinical Trials · Oncology &amp; Hematology · AI/ML</div>
+  <h1 class="hero-name">Mohamed Amine <em>BAYAR</em></h1>
+  <div class="hero-title" data-i18n="hero.title">PhD — Independent Consultant</div>
+  <div class="hero-line"></div>
+  <p class="hero-tagline" data-i18n="hero.tagline">"Bridging clinical trials and artificial intelligence."</p>
+  <div class="hero-cta">
+    <a href="#services" class="btn-primary" data-i18n="hero.cta1">Explore Services</a>
+    <a href="#contact"  class="btn-outline"  data-i18n="hero.cta2">Get in Touch</a>
+  </div>
+  <div class="hero-badge">
+    <div class="hero-badge-inner">
+      <div class="badge-num">PhD</div>
+      <div class="badge-label" data-i18n="hero.badge">Biostats &amp; AI</div>
+    </div>
+  </div>
+</section>
+</div>
+
+<div class="divider"></div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-label" data-i18n="about.label">About</div>
+  <h2 class="section-title reveal" data-i18n="about.title">Biostatistician at the <em>intersection</em><br>of clinical trials and AI/ML</h2>
+  <div class="about-grid">
+    <div class="about-text reveal">
+      <p data-i18n="about.p1">PhD-trained biostatistician with 13+ years of experience across the full clinical development lifecycle — from Phase I dose escalation to Phase III pivotal trials. My primary expertise lies in oncology and hematology, though I bring rigorous methodology and a results-driven approach to any therapeutic area.</p>
+      <p data-i18n="about.p2">I have contributed to landmark drug development programs at Johnson &amp; Johnson (Multiple Myeloma bispecifics, a trispecific, and CAR-T therapies), Novartis (Scemblix/asciminib for CML, supporting FDA and EMA approval), and Gustave Roussy, Europe's largest cancer center. Across these roles, I have led trial design, SAP development, regulatory interactions, and final study reporting to the highest scientific and regulatory standards.</p>
+      <p data-i18n="about.p3">Beyond classical biostatistics, I apply machine learning and AI to clinical and genomic data. I am the co-inventor of a patent using ML to predict prognosis in Triple Negative Breast Cancer, and an author of 15+ peer-reviewed publications (1,200+ citations) in journals including the Annals of Oncology, JCO, and Statistics in Medicine.</p>
+    </div>
+    <div class="about-stats reveal">
+      <div class="stat-card">
+        <div class="stat-num">13+</div>
+        <div class="stat-desc" data-i18n="stat.years">Years of Experience</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">I–IV</div>
+        <div class="stat-desc" data-i18n="stat.phases">Trial Phases</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">15+</div>
+        <div class="stat-desc" data-i18n="stat.publications">Publications</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">1,200+</div>
+        <div class="stat-desc" data-i18n="stat.citations">Citations</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="section-label" data-i18n="services.label">Services</div>
+  <h2 class="section-title reveal" data-i18n="services.title">Areas of <em>expertise</em></h2>
+
+  <div class="services-grid">
+    <div class="service-card reveal">
+      <span class="service-icon">
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="31" x2="31" y2="31"/>
+          <line x1="5" y1="31" x2="5"  y2="5"/>
+          <polyline points="5,10 10,10 10,15 15,15 15,20 20,20 20,24 27,24 27,28 31,28"/>
+          <line x1="5"  y1="10" x2="3"  y2="10"/>
+          <line x1="31" y1="31" x2="31" y2="33"/>
+        </svg>
+      </span>
+      <h3 class="service-title" data-i18n="s1.title">Statistical Analysis &amp; End-to-End Clinical Trial Support</h3>
+      <p class="service-desc" data-i18n="s1.desc">Advanced clinical trial design and analysis including Bayesian framework and adaptive designs, sample size calculations, Estimand Framework, and regulatory-grade statistical reporting (SAP, TLFs, CSRs).</p>
+      <div class="service-tags">
+        <span class="tag">R (Shiny · RMarkdown · gsDesign · rpact)</span>
+        <span class="tag">Python (statsmodels · lifelines · scipy)</span>
+        <span class="tag">SAS</span>
+        <span class="tag">ICH E9</span>
+      </div>
+    </div>
+
+    <div class="service-card reveal">
+      <span class="service-icon">
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="18" cy="18" r="3"/>
+          <circle cx="6"  cy="10" r="2.5"/>
+          <circle cx="30" cy="10" r="2.5"/>
+          <circle cx="6"  cy="26" r="2.5"/>
+          <circle cx="30" cy="26" r="2.5"/>
+          <circle cx="18" cy="4"  r="2.5"/>
+          <circle cx="18" cy="32" r="2.5"/>
+          <line x1="15" y1="18" x2="8.5"  y2="10"/>
+          <line x1="21" y1="18" x2="27.5" y2="10"/>
+          <line x1="15" y1="18" x2="8.5"  y2="26"/>
+          <line x1="21" y1="18" x2="27.5" y2="26"/>
+          <line x1="18" y1="15" x2="18"   y2="6.5"/>
+          <line x1="18" y1="21" x2="18"   y2="29.5"/>
+        </svg>
+      </span>
+      <h3 class="service-title" data-i18n="s2.title">Data Science, Machine Learning &amp; Artificial Intelligence</h3>
+      <p class="service-desc" data-i18n="s2.desc">Advanced analytics on clinical data, real-world data, and high-dimensional data — predictive modeling, reproducible pipelines, and application of ML and AI to biomarker discovery.</p>
+      <div class="service-tags">
+        <span class="tag">Python (scikit-learn · XGBoost · pandas · NumPy · SHAP)</span>
+        <span class="tag">Deep Learning</span>
+        <span class="tag">NLP</span>
+        <span class="tag">SQL</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-label" data-i18n="contact.label">Contact</div>
+  <h2 class="section-title reveal" data-i18n="contact.title">Let's work <em>together</em></h2>
+  <p class="reveal contact-sub" style="color:var(--muted);max-width:500px;margin:0 auto;line-height:1.8;" data-i18n="contact.sub">
+    Available for freelance consulting missions, collaboration on clinical studies, and research projects.
+  </p>
+
+  <div class="contact-box reveal">
+    <a href="mailto:bayar.amine@gmail.com" class="contact-email">bayar.amine@gmail.com</a>
+
+    <!-- Flash messages -->
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        {% for msg in messages %}
+          <div class="flash-{{ msg }}">
+            {% if msg == 'success' %}
+              <span data-i18n="form.success">Your message has been sent. I will get back to you shortly.</span>
+            {% else %}
+              <span data-i18n="form.error">Please fill in all fields.</span>
+            {% endif %}
+          </div>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+
+    <!-- Contact form -->
+    <form action="/contact" method="post" class="contact-form">
+      <div class="form-group">
+        <input type="text"  name="name"    data-i18n-placeholder="form.name"    placeholder="Full name"     required>
+      </div>
+      <div class="form-group">
+        <input type="email" name="email"   data-i18n-placeholder="form.email"   placeholder="Email address" required>
+      </div>
+      <div class="form-group">
+        <textarea           name="message" data-i18n-placeholder="form.message" placeholder="Your message"  rows="4" required></textarea>
+      </div>
+      <button type="submit" class="btn-primary" data-i18n="form.send">Send Message</button>
+    </form>
+
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/mohamed-amine-bayar-51166a94/" target="_blank" class="social-link">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        LinkedIn
+      </a>
+      <a href="https://github.com/bayaramine" target="_blank" class="social-link">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        GitHub
+      </a>
+      <a href="https://scholar.google.com/citations?user=u6Ns41gAAAAJ&hl=en" target="_blank" class="social-link">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 10a8 8 0 0 1 7.162 3.44L24 9.5z"/></svg>
+        Google Scholar
+      </a>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
