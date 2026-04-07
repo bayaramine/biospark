@@ -420,9 +420,9 @@
   }
 
   .service-icon {
-    font-size: 2rem;
-    margin-bottom: 1.2rem;
     display: block;
+    margin-bottom: 1.4rem;
+    opacity: 0.9;
   }
 
   .service-title {
@@ -649,7 +649,15 @@
   <div class="services-grid">
     <div class="service-card reveal">
       <div class="service-num">01</div>
-      <span class="service-icon">📊</span>
+      <span class="service-icon">
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="31" x2="31" y2="31"/>
+          <line x1="5" y1="31" x2="5" y2="5"/>
+          <polyline points="5,10 10,10 10,15 15,15 15,20 20,20 20,24 27,24 27,28 31,28"/>
+          <line x1="5" y1="10" x2="3" y2="10"/>
+          <line x1="31" y1="31" x2="31" y2="33"/>
+        </svg>
+      </span>
       <h3 class="service-title" data-i18n="s1.title">Statistical Analysis &amp; End-to-End Clinical Trial Support</h3>
       <p class="service-desc" data-i18n="s1.desc">Advanced clinical trial design and analysis including Bayesian framework and adaptive designs, sample size calculations, Estimand Framework, and regulatory-grade statistical reporting (SAP, TLFs, CSRs).</p>
       <div class="service-tags">
@@ -662,7 +670,26 @@
 
     <div class="service-card reveal">
       <div class="service-num">02</div>
-      <span class="service-icon">🧠</span>
+      <span class="service-icon">
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <!-- Central node -->
+          <circle cx="18" cy="18" r="3"/>
+          <!-- Outer nodes -->
+          <circle cx="6" cy="10" r="2.5"/>
+          <circle cx="30" cy="10" r="2.5"/>
+          <circle cx="6" cy="26" r="2.5"/>
+          <circle cx="30" cy="26" r="2.5"/>
+          <circle cx="18" cy="4"  r="2.5"/>
+          <circle cx="18" cy="32" r="2.5"/>
+          <!-- Connections -->
+          <line x1="15" y1="18" x2="8.5"  y2="10"/>
+          <line x1="21" y1="18" x2="27.5" y2="10"/>
+          <line x1="15" y1="18" x2="8.5"  y2="26"/>
+          <line x1="21" y1="18" x2="27.5" y2="26"/>
+          <line x1="18" y1="15" x2="18"   y2="6.5"/>
+          <line x1="18" y1="21" x2="18"   y2="29.5"/>
+        </svg>
+      </span>
       <h3 class="service-title" data-i18n="s2.title">Data Science, Machine Learning &amp; Artificial Intelligence</h3>
       <p class="service-desc" data-i18n="s2.desc">Advanced analytics on clinical data, real-world data, and high-dimensional data — predictive modeling, reproducible pipelines, and application of ML and AI to biomarker discovery.</p>
       <div class="service-tags">
@@ -765,9 +792,9 @@ const translations = {
     'services.label': 'Services',
     'services.title': 'Domaines d\'<em>expertise</em>',
     's1.title': 'Analyse Statistique &amp; Support Complet des Essais Cliniques',
-    's1.desc': 'Conception et analyse avancées d\'essais cliniques incluant les approches bayésiennes et les plans adaptatifs, calcul de taille d\'échantillon, cadre des estimands et rapports statistiques réglementaires (SAP, TLFs, CSRs).',
+    's1.desc': 'Conception et analyse avancées d\'essais cliniques incluant les approches bayésiennes et les designs adaptatifs, calcul de taille d\'échantillon, déploiment des estimands, et rapports statistiques réglementaires (SAP, TLFs, CSRs).',
     's2.title': 'Data Science, Machine Learning &amp; Intelligence Artificielle',
-    's2.desc': 'Analyse avancée de données cliniques, de données en vie réelle et de données de haute dimension — modélisation prédictive, pipelines reproductibles et application du ML et de l\'IA à la découverte de biomarqueurs.',
+    's2.desc': 'Analyse avancée de données cliniques, de données en vie réelle et de données en haute dimension — modélisation prédictive, pipelines reproductibles, et application du ML et de l\'IA à la découverte de biomarqueurs.',
     'contact.label': 'Contact',
     'contact.title': 'Travaillons <em>ensemble</em>',
     'contact.sub': 'Disponible pour des missions de conseil en freelance, des collaborations sur des études cliniques et des projets de recherche.',
@@ -795,10 +822,10 @@ const translations = {
     'stat.citations': 'استشهادات',
     'services.label': 'الخدمات',
     'services.title': 'مجالات <em>الخبرة</em>',
-    's1.title': 'التحليل الإحصائي والدعم الشامل للتجارب السريرية',
-    's1.desc': 'تصميم وتحليل متقدم للتجارب السريرية يشمل الأساليب البايزية والتصاميم التكيفية، حساب حجم العينة، إطار الـ Estimand، والتقارير الإحصائية التنظيمية (SAP، TLFs، CSRs).',
+    's1.title': 'التحليل الإحصائي والدعم للتجارب السريرية',
+    's1.desc': 'تصميم وتحليل متقدم للتجارب السريرية يشمل الأساليب البايزية والتصاميم التكيفية، حساب حجم العينة، والتقارير الإحصائية التنظيمية (SAP، TLFs، CSRs).',
     's2.title': 'علم البيانات والتعلم الآلي والذكاء الاصطناعي',
-    's2.desc': 'تحليل متقدم للبيانات السريرية والبيانات الواقعية والبيانات عالية الأبعاد — نمذجة تنبؤية، خطوط أنابيب قابلة للتكرار، وتطبيق التعلم الآلي والذكاء الاصطناعي على اكتشاف المؤشرات الحيوية.',
+    's2.desc': 'تحليل متقدم للبيانات السريرية والبيانات الواقعية والبيانات عالية الأبعاد — نمذجة تنبؤية، وتطبيق التعلم الآلي والذكاء الاصطناعي على اكتشاف المؤشرات الحيوية.',
     'contact.label': 'تواصل',
     'contact.title': 'لنعمل <em>معًا</em>',
     'contact.sub': 'متاح لمهام الاستشارة المستقلة، والتعاون في الدراسات السريرية والمشاريع البحثية.',
