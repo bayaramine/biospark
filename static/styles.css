@@ -438,18 +438,15 @@ section {
   background: linear-gradient(90deg, transparent, var(--accent), transparent);
 }
 
-.contact-email {
+.contact-form-title {
   font-family: 'Cormorant Garamond', serif;
   font-size: clamp(1.4rem, 3vw, 2rem);
-  font-weight: 300;
+  font-weight: 400;
   color: var(--text);
-  text-decoration: none;
   display: block;
   margin-bottom: 2.5rem;
-  transition: color 0.3s;
+  margin-top: 0;
 }
-
-.contact-email:hover { color: var(--accent); }
 
 /* Contact form */
 .contact-form {
