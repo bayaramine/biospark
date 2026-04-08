@@ -1,10 +1,23 @@
 import sqlite3
+import smtplib
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
 from flask import Flask, render_template, request, redirect, url_for, flash
+from dotenv import load_dotenv
+import os
+
+# Load environment variables from .env file
+load_dotenv()
 
 app = Flask(__name__)
 app.secret_key = 'biospark-dev-key-change-in-production'
 
 DATABASE = 'biospark.db'
+
+# Gmail Configuration
+GMAIL_ADDRESS = os.getenv('GMAIL_ADDRESS')
+GMAIL_APP_PASSWORD = os.getenv('GMAIL_APP_PASSWORD')
+RECIPIENT_EMAIL = os.getenv('RECIPIENT_EMAIL')
 
 
 def get_db():
@@ -34,6 +47,41 @@ def init_db():
     db.close()
 
 
+def send_email(name, email, message):
+    """Send contact form message to Gmail"""
+    try:
+        # Create email message
+        msg = MIMEMultipart()
+        msg['From'] = GMAIL_ADDRESS
+        msg['To'] = RECIPIENT_EMAIL
+        msg['Subject'] = f'New Contact Form Submission from {name}'
+
+        # Email body with nice formatting
+        body = f"""
+New contact form submission from BioSpark website:
+
+Name: {name}
+Email: {email}
+Message:
+{message}
+
+---
+Reply to: {email}
+        """
+
+        msg.attach(MIMEText(body, 'plain'))
+
+        # Send email via Gmail SMTP
+        with smtplib.SMTP_SSL('smtp.gmail.com', 465) as server:
+            server.login(GMAIL_ADDRESS, GMAIL_APP_PASSWORD)
+            server.send_message(msg)
+
+        return True
+    except Exception as e:
+        print(f"Error sending email: {e}")
+        return False
+
+
 @app.route('/')
 def index():
     db = get_db()
@@ -51,6 +99,7 @@ def contact():
     message = request.form.get('message', '').strip()
 
     if name and email and message:
+        # Save to database
         db = get_db()
         db.execute(
             'INSERT INTO contacts (name, email, message) VALUES (?, ?, ?)',
@@ -58,7 +107,16 @@ def contact():
         )
         db.commit()
         db.close()
-        flash('success')
+
+        # Send email to Gmail
+        email_sent = send_email(name, email, message)
+
+        if email_sent:
+            flash('success')
+        else:
+            # Email failed but message was saved to database
+            print("Warning: Email not sent but message saved to database")
+            flash('success')  # Still show success since message was saved
     else:
         flash('error')
 
