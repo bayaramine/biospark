@@ -164,10 +164,10 @@ nav {
 /* === HERO === */
 #hero {
   position: relative; z-index: 1;
-  min-height: 100vh;
+  min-height: 42vh;
   display: flex; flex-direction: column;
   justify-content: center; align-items: flex-start;
-  padding: 8rem 4rem 4rem;
+  padding: 8rem 4rem 3rem;
   max-width: 1200px; margin: 0 auto;
 }
 
@@ -563,6 +563,7 @@ footer {
 }
 
 /* === NARRATIVE SECTIONS (home) === */
+#home-s1, #home-s2 { padding-top: 4rem; padding-bottom: 4rem; }
 .narrative-body { max-width: 760px; }
 
 .narrative-text {
@@ -571,6 +572,15 @@ footer {
   color: rgba(31,41,55,0.85);
   margin-bottom: 1.4rem;
 }
+
+.inline-link {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: opacity 0.2s;
+}
+
+.inline-link:hover { opacity: 0.7; }
 
 .narrative-quote {
   font-family: 'Cormorant Garamond', serif;

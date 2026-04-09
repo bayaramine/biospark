@@ -27,7 +27,7 @@ const translations = {
     'home.s2.label':     'Two worlds. One bridge.',
     'home.s2.p1':        'There are people who speak fluently about biostatistics, trial design, and regulatory submissions — but have never written a line of Python. There are people who build sophisticated ML pipelines — but have never read a protocol or an FDA guidance document.',
     'home.s2.highlight': 'BioSpark sits at the intersection.',
-    'home.s2.p2':        'If you\'re a biotech, a pharma company, or a healthcare SME looking for someone who speaks biostatistics and regulatory submissions as fluently as Python, machine learning, and cloud infrastructure — let\'s talk.',
+    'home.s2.p2':        'If you\'re a biotech, a pharma company, or a healthcare SME looking for someone who speaks biostatistics and regulatory submissions as fluently as Python, machine learning, and cloud infrastructure — <a href="/contact" class="inline-link">let\'s talk</a>.',
 
     // ABOUT PAGE — SECTION 3
     'about.label':         'About',
@@ -103,7 +103,7 @@ const translations = {
     'home.s2.label':     'Deux mondes. Un pont.',
     'home.s2.p1':        'Il y a des personnes qui parlent couramment de biostatistiques, de conception d\'essais et de soumissions réglementaires — mais qui n\'ont jamais écrit une ligne de Python. Il y a des personnes qui construisent des pipelines de machine learning sophistiqués — mais qui n\'ont jamais lu un protocole ou un document de guidance FDA.',
     'home.s2.highlight': 'BioSpark se trouve à cette intersection.',
-    'home.s2.p2':        'Si vous êtes une biotech, une entreprise pharmaceutique ou une PME dans le secteur de la santé à la recherche d\'un interlocuteur maîtrisant aussi bien la biostatistique et les soumissions réglementaires que Python, le machine learning et l\'infrastructure cloud — parlons-en.',
+    'home.s2.p2':        'Si vous êtes une biotech, une entreprise pharmaceutique ou une PME dans le secteur de la santé à la recherche d\'un interlocuteur maîtrisant aussi bien la biostatistique et les soumissions réglementaires que Python, le machine learning et l\'infrastructure cloud — <a href="/contact" class="inline-link">parlons-en</a>.',
 
     // ABOUT PAGE — SECTION 3
     'about.label':         'À propos',
@@ -179,7 +179,7 @@ const translations = {
     'home.s2.label':     'عالمان. جسر واحد.',
     'home.s2.p1':        'ثمة من يتحدث بطلاقة عن الإحصاء الحيوي وتصميم التجارب والتقديمات التنظيمية — لكنه لم يكتب سطراً واحداً من Python قط. وثمة من يبني خطوط أنابيب تعلم آلي متطورة — لكنه لم يطّلع على بروتوكول أو وثيقة توجيهية من FDA قط.',
     'home.s2.highlight': '.BioSpark يقع عند هذا التقاطع',
-    'home.s2.p2':        'إن كنت شركة بيوتك، أو مؤسسة دوائية، أو منشأة صغيرة ومتوسطة في قطاع الرعاية الصحية تبحث عمن يجمع بين الإحصاء الحيوي والتقديمات التنظيمية من جهة، وPython والتعلم الآلي والبنية التحتية السحابية من جهة أخرى — فلنتحدث.',
+    'home.s2.p2':        'إن كنت شركة بيوتك، أو مؤسسة دوائية، أو منشأة صغيرة ومتوسطة في قطاع الرعاية الصحية تبحث عمن يجمع بين الإحصاء الحيوي والتقديمات التنظيمية من جهة، وPython والتعلم الآلي والبنية التحتية السحابية من جهة أخرى — <a href="/contact" class="inline-link">فلنتحدث</a>.',
 
     // ABOUT PAGE — SECTION 3
     'about.label':         'نبذة عني',
