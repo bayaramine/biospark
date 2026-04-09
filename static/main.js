@@ -13,11 +13,9 @@ const translations = {
 
     // HERO
     'hero.tag':     'Biostatistics · Clinical Trials · Oncology &amp; Hematology · AI/ML',
-    'hero.name':    'Mohamed Amine Bayar',
-    'hero.title':   'PhD — Independent Consultant',
+    'hero.name':    'BioSpark',
+    'hero.title':   'Clinical Intelligence. Regulatory Precision.',
     'hero.tagline': '"Bridging clinical trials and artificial intelligence."',
-    'hero.cta1':    'Explore Services',
-    'hero.cta2':    'Get in Touch',
 
     // HOME — SECTION 1
     'home.s1.label': 'The gap no one is talking about',
@@ -91,11 +89,9 @@ const translations = {
 
     // HERO
     'hero.tag':     'Biostatistiques · Essais Cliniques · Oncologie &amp; Hématologie · IA/ML',
-    'hero.name':    'Mohamed Amine Bayar',
-    'hero.title':   'Docteur — Consultant Indépendant',
+    'hero.name':    'BioSpark',
+    'hero.title':   'Intelligence Clinique. Précision Réglementaire.',
     'hero.tagline': '« À l\'intersection des essais cliniques et de l\'intelligence artificielle. »',
-    'hero.cta1':    'Voir les services',
-    'hero.cta2':    'Me contacter',
 
     // HOME — SECTION 1
     'home.s1.label': 'Le fossé dont personne ne parle',
@@ -169,11 +165,9 @@ const translations = {
 
     // HERO
     'hero.tag':     'إحصاء حيوي · تجارب سريرية · أورام وأمراض الدم · الذكاء الاصطناعي',
-    'hero.name':    'محمّد أمين بيّار',
-    'hero.title':   'دكتوراه — مستشار مستقل',
+    'hero.name':    'BioSpark',
+    'hero.title':   'ذكاء سريري. دقة تنظيمية.',
     'hero.tagline': '«في تقاطع التجارب السريرية والذكاء الاصطناعي.»',
-    'hero.cta1':    'استعرض الخدمات',
-    'hero.cta2':    'تواصل معي',
 
     // HOME — SECTION 1
     'home.s1.label': 'الفجوة التي لا أحد يتحدث عنها',
