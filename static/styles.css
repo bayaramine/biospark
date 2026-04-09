@@ -139,6 +139,7 @@ nav {
 }
 
 .nav-links a:hover { color: var(--accent); }
+.nav-links a.nav-active { color: var(--accent); font-weight: 500; }
 
 .lang-switcher {
   display: flex; align-items: center;
@@ -404,6 +405,11 @@ section {
 .service-tags {
   display: flex; flex-wrap: wrap; gap: 0.5rem;
   margin-top: 1.5rem;
+}
+
+.services-cta {
+  margin-top: 3rem;
+  text-align: center;
 }
 
 .tag {

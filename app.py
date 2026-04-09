@@ -47,16 +47,28 @@ def init_db():
     db.close()
 
 
+def get_visit_count():
+    db = get_db()
+    count = db.execute('SELECT COUNT(*) AS count FROM visits').fetchone()['count']
+    db.close()
+    return count
+
+
+def record_visit():
+    db = get_db()
+    db.execute('INSERT INTO visits (visited_at) VALUES (CURRENT_TIMESTAMP)')
+    db.commit()
+    db.close()
+
+
 def send_email(name, email, message):
     """Send contact form message to Gmail"""
     try:
-        # Create email message
         msg = MIMEMultipart()
         msg['From'] = GMAIL_ADDRESS
         msg['To'] = RECIPIENT_EMAIL
         msg['Subject'] = f'New Contact Form Submission from {name}'
 
-        # Email body with nice formatting
         body = f"""
 New contact form submission from BioSpark website:
 
@@ -71,7 +83,6 @@ Reply to: {email}
 
         msg.attach(MIMEText(body, 'plain'))
 
-        # Send email via Gmail SMTP
         with smtplib.SMTP_SSL('smtp.gmail.com', 465) as server:
             server.login(GMAIL_ADDRESS, GMAIL_APP_PASSWORD)
             server.send_message(msg)
@@ -84,43 +95,49 @@ Reply to: {email}
 
 @app.route('/')
 def index():
-    db = get_db()
-    db.execute('INSERT INTO visits (visited_at) VALUES (CURRENT_TIMESTAMP)')
-    db.commit()
-    visit_count = db.execute('SELECT COUNT(*) AS count FROM visits').fetchone()['count']
-    db.close()
-    return render_template('index.html', visit_count=visit_count)
+    record_visit()
+    return render_template('index.html',
+                           visit_count=get_visit_count(),
+                           active_page='home')
 
 
-@app.route('/contact', methods=['POST'])
+@app.route('/services')
+def services():
+    record_visit()
+    return render_template('services.html',
+                           visit_count=get_visit_count(),
+                           active_page='services')
+
+
+@app.route('/contact', methods=['GET', 'POST'])
 def contact():
-    name    = request.form.get('name', '').strip()
-    email   = request.form.get('email', '').strip()
-    message = request.form.get('message', '').strip()
+    if request.method == 'POST':
+        name    = request.form.get('name', '').strip()
+        email   = request.form.get('email', '').strip()
+        message = request.form.get('message', '').strip()
 
-    if name and email and message:
-        # Save to database
-        db = get_db()
-        db.execute(
-            'INSERT INTO contacts (name, email, message) VALUES (?, ?, ?)',
-            (name, email, message)
-        )
-        db.commit()
-        db.close()
+        if name and email and message:
+            # Save to database
+            db = get_db()
+            db.execute(
+                'INSERT INTO contacts (name, email, message) VALUES (?, ?, ?)',
+                (name, email, message)
+            )
+            db.commit()
+            db.close()
 
-        # Send email to Gmail
-        email_sent = send_email(name, email, message)
-
-        if email_sent:
+            # Send email to Gmail
+            send_email(name, email, message)
             flash('success')
         else:
-            # Email failed but message was saved to database
-            print("Warning: Email not sent but message saved to database")
-            flash('success')  # Still show success since message was saved
-    else:
-        flash('error')
+            flash('error')
 
-    return redirect(url_for('index') + '#contact')
+        return redirect(url_for('contact'))
+
+    record_visit()
+    return render_template('contact.html',
+                           visit_count=get_visit_count(),
+                           active_page='contact')
 
 
 if __name__ == '__main__':
