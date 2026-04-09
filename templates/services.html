@@ -6,8 +6,11 @@
 <section id="services">
   <div class="section-label" data-i18n="services.label">Services</div>
   <h2 class="section-title reveal" data-i18n="services.title">Areas of <em>expertise</em></h2>
+  <p class="services-what reveal" data-i18n="services.what">What we do</p>
 
   <div class="services-grid">
+
+    <!-- TIER 1: Strategic advisory -->
     <div class="service-card reveal">
       <span class="service-icon">
         <svg width="36" height="36" viewBox="0 0 36 36" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -18,8 +21,12 @@
           <line x1="31" y1="31" x2="31" y2="33"/>
         </svg>
       </span>
-      <h3 class="service-title" data-i18n="s1.title">Statistical Analysis &amp; End-to-End Clinical Trial Support</h3>
-      <p class="service-desc" data-i18n="s1.desc">Advanced clinical trial design and analysis including Bayesian framework and adaptive designs, sample size calculations, Estimand Framework, and regulatory-grade statistical reporting (SAP, TLFs, CSRs).</p>
+      <h3 class="tier-label" data-i18n="services.tier1.label">Strategic advisory</h3>
+      <ul class="tier-list">
+        <li data-i18n="services.tier1.i1">Clinical AI architecture — embedding domain expertise into healthcare AI products from design to validation</li>
+        <li data-i18n="services.tier1.i2">Trial design consulting — adaptive designs, Bayesian methods, estimand frameworks</li>
+        <li data-i18n="services.tier1.i3">Regulatory-statistical strategy — bridging biostatistics and health authority expectations (FDA, EMA)</li>
+      </ul>
       <div class="service-tags">
         <span class="tag">R (Shiny · RMarkdown · gsDesign · rpact)</span>
         <span class="tag">Python (statsmodels · lifelines · scipy)</span>
@@ -28,6 +35,7 @@
       </div>
     </div>
 
+    <!-- TIER 2: Operational support -->
     <div class="service-card reveal">
       <span class="service-icon">
         <svg width="36" height="36" viewBox="0 0 36 36" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -46,8 +54,12 @@
           <line x1="18" y1="21" x2="18"   y2="29.5"/>
         </svg>
       </span>
-      <h3 class="service-title" data-i18n="s2.title">Data Science, Machine Learning &amp; Artificial Intelligence</h3>
-      <p class="service-desc" data-i18n="s2.desc">Advanced analytics on clinical data, real-world data, and high-dimensional data — predictive modeling, reproducible pipelines, and application of ML and AI to biomarker discovery.</p>
+      <h3 class="tier-label" data-i18n="services.tier2.label">Operational support</h3>
+      <ul class="tier-list">
+        <li data-i18n="services.tier2.i1">Embedded biostatistician on clinical programs (Phase I–III)</li>
+        <li data-i18n="services.tier2.i2">Statistical analysis plans, programming oversight, study reporting</li>
+        <li data-i18n="services.tier2.i3">CDISC standards, TLF production, submission-ready deliverables</li>
+      </ul>
       <div class="service-tags">
         <span class="tag">Python (scikit-learn · XGBoost · pandas · NumPy · SHAP)</span>
         <span class="tag">Deep Learning</span>
@@ -55,6 +67,7 @@
         <span class="tag">SQL</span>
       </div>
     </div>
+
   </div>
 
   <div class="services-cta reveal">

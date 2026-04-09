@@ -5,35 +5,71 @@
 
 const translations = {
   en: {
+    // NAV
+    'nav.home':     'Home',
     'nav.about':    'About',
     'nav.services': 'Services',
     'nav.contact':  'Contact',
+
+    // HERO
     'hero.tag':     'Biostatistics · Clinical Trials · Oncology &amp; Hematology · AI/ML',
     'hero.name':    'Mohamed Amine Bayar',
     'hero.title':   'PhD — Independent Consultant',
     'hero.tagline': '"Bridging clinical trials and artificial intelligence."',
     'hero.cta1':    'Explore Services',
     'hero.cta2':    'Get in Touch',
-    'hero.badge':   'Biostats &amp; AI',
-    'about.label':  'About',
-    'about.title':  'Biostatistician at the <em>intersection</em><br>of clinical trials and AI/ML',
-    'about.p1': 'PhD-trained biostatistician with 13+ years of experience across the full clinical development lifecycle — from Phase I dose escalation to Phase III pivotal trials. My primary expertise lies in oncology and hematology, though I bring rigorous methodology and a results-driven approach to any therapeutic area.',
-    'about.p2': 'I have contributed to landmark drug development programs at Johnson &amp; Johnson (Multiple Myeloma bispecifics, a trispecific, and CAR-T therapies), Novartis (Scemblix/asciminib for CML, supporting FDA and EMA approval), and Gustave Roussy, Europe\'s largest cancer center. Across these roles, I have led trial design, SAP development, regulatory interactions, and final study reporting to the highest scientific and regulatory standards.',
-    'about.p3': 'Beyond classical biostatistics, I apply machine learning and AI to clinical and genomic data. I am the co-inventor of a patent using ML to predict prognosis in Triple Negative Breast Cancer, and an author of 15+ peer-reviewed publications (1,200+ citations) in journals including the Annals of Oncology, JCO, and Statistics in Medicine.',
-    'stat.years':        'Years of Experience',
-    'stat.phases':       'Trial Phases',
-    'stat.publications': 'Publications',
-    'stat.citations':    'Citations',
-    'services.label': 'Services',
-    'services.title': 'Areas of <em>expertise</em>',
-    'services.cta':   'Discuss Your Project',
-    's1.title': 'Statistical Analysis &amp; End-to-End Clinical Trial Support',
-    's1.desc':  'Advanced clinical trial design and analysis including Bayesian framework and adaptive designs, sample size calculations, Estimand Framework, and regulatory-grade statistical reporting (SAP, TLFs, CSRs).',
-    's2.title': 'Data Science, Machine Learning &amp; Artificial Intelligence',
-    's2.desc':  'Advanced analytics on clinical data, real-world data, and high-dimensional data — predictive modeling, reproducible pipelines, and application of ML and AI to biomarker discovery.',
+
+    // HOME — SECTION 1
+    'home.s1.label': 'The gap no one is talking about',
+    'home.s1.p1':    'Everyone is hiring data scientists and engineers to build healthcare AI. Almost no one is asking the people who actually understand clinical trials — the workflows, the regulatory logic, the edge cases, the conversations with health authorities.',
+    'home.s1.p2':    'I spent 13 years in drug development, from academic research at Gustave Roussy to global programs at Novartis and Johnson &amp; Johnson — CAR-T therapies, bispecific antibodies, pivotal Phase III trials. I\'ve seen what happens when AI meets clinical development with deep domain expertise, and what happens without it. The difference is not subtle. It is the difference between a product that passes regulatory scrutiny and one that doesn\'t.',
+    'home.s1.p3':    'Clinical AI needs clinical trialists — not as validators at the end, but as architects from the start.',
+
+    // HOME — SECTION 2
+    'home.s2.label':     'Two worlds. One bridge.',
+    'home.s2.p1':        'There are people who speak fluently about biostatistics, trial design, and regulatory submissions — but have never written a line of Python. There are people who build sophisticated ML pipelines — but have never read a protocol or an FDA guidance document.',
+    'home.s2.highlight': 'BioSpark sits at the intersection.',
+    'home.s2.p2':        'If you\'re a biotech, a pharma company, or a healthcare SME looking for someone who speaks biostatistics and regulatory submissions as fluently as Python, machine learning, and cloud infrastructure — let\'s talk.',
+
+    // ABOUT PAGE — SECTION 3
+    'about.label':         'About',
+    'about.page.name':     'Mohamed Amine Bayar, PhD',
+    'about.page.subtitle': 'Biostatistician. Clinical development strategist. AI/ML practitioner.',
+    'about.page.intro':    '13 years across the full clinical development lifecycle — from Phase I dose escalation to Phase III pivotal trials, from SAP authorship to health authority interactions.',
+    'about.where':         'Where I\'ve worked:',
+    'about.jnj.title':     'Johnson &amp; Johnson',
+    'about.jnj.desc':      'Lead biostatistician on multiple myeloma bispecifics, a first-in-class trispecific antibody, and CAR-T therapies. Designed and reported pivotal studies in one of the most competitive spaces in oncology.',
+    'about.novartis.title': 'Novartis',
+    'about.novartis.desc':  'Core statistical contributor to the asciminib (Scemblix) program for CML, supporting both FDA and EMA marketing approvals.',
+    'about.gr.title':       'Gustave Roussy',
+    'about.gr.desc':        'Europe\'s largest cancer center. Academic research at the intersection of biostatistics, genomics, and clinical outcomes.',
+    'about.apart':          'What sets me apart:',
+    'about.apart.text':     'Co-inventor of a patent applying machine learning to predict prognosis in triple-negative breast cancer. Author of 15+ peer-reviewed publications with over 1,200 citations in journals including the Annals of Oncology, JCO, and Statistics in Medicine. PhD from Université Paris-Saclay focused on Phase III trial design in rare diseases and biomarker-defined subgroups.',
+    'about.apart.text2':    'I don\'t just analyze clinical data. I understand where it comes from, what it means clinically, and what regulators need to see.',
+    'about.cv':             'Download full CV',
+    'stat.years':           'Years of Experience',
+    'stat.phases':          'Trial Phases',
+    'stat.publications':    'Publications',
+    'stat.citations':       'Citations',
+
+    // SERVICES PAGE — SECTION 4
+    'services.label':      'Services',
+    'services.title':      'Areas of <em>expertise</em>',
+    'services.what':       'What we do',
+    'services.tier1.label': 'Strategic advisory',
+    'services.tier1.i1':   'Clinical AI architecture — embedding domain expertise into healthcare AI products from design to validation',
+    'services.tier1.i2':   'Trial design consulting — adaptive designs, Bayesian methods, estimand frameworks',
+    'services.tier1.i3':   'Regulatory-statistical strategy — bridging biostatistics and health authority expectations (FDA, EMA)',
+    'services.tier2.label': 'Operational support',
+    'services.tier2.i1':   'Embedded biostatistician on clinical programs (Phase I–III)',
+    'services.tier2.i2':   'Statistical analysis plans, programming oversight, study reporting',
+    'services.tier2.i3':   'CDISC standards, TLF production, submission-ready deliverables',
+    'services.cta':        'Discuss Your Project',
+
+    // CONTACT PAGE — SECTION 5 + FORM
     'contact.label': 'Contact',
     'contact.title': 'Let\'s work <em>together</em>',
-    'contact.sub':   'Available for freelance consulting missions, collaboration on clinical studies, and research projects.',
+    'contact.sub':   'Whether you need a strategic partner to shape your clinical AI approach or a senior biostatistician to strengthen your team on an ongoing program — I\'m one conversation away.',
     'contact.form':  'Contact Form',
     'form.name':     'Full name',
     'form.email':    'Email address',
@@ -41,39 +77,77 @@ const translations = {
     'form.send':     'Send Message',
     'form.success':  'Your message has been sent. I will get back to you shortly.',
     'form.error':    'Please fill in all fields.',
-    'footer.copy':   'All rights reserved'
+
+    // FOOTER
+    'footer.copy': 'All rights reserved'
   },
 
   fr: {
+    // NAV
+    'nav.home':     'Accueil',
     'nav.about':    'À propos',
     'nav.services': 'Services',
     'nav.contact':  'Contact',
+
+    // HERO
     'hero.tag':     'Biostatistiques · Essais Cliniques · Oncologie &amp; Hématologie · IA/ML',
     'hero.name':    'Mohamed Amine Bayar',
     'hero.title':   'Docteur — Consultant Indépendant',
     'hero.tagline': '« À l\'intersection des essais cliniques et de l\'intelligence artificielle. »',
     'hero.cta1':    'Voir les services',
     'hero.cta2':    'Me contacter',
-    'hero.badge':   'Biostats &amp; IA',
-    'about.label':  'À propos',
-    'about.title':  'Biostatisticien à l\'<em>intersection</em><br>des essais cliniques et de l\'IA/ML',
-    'about.p1': 'Biostatisticien titulaire d\'un doctorat, avec plus de 13 ans d\'expérience au sein de laboratoires pharmaceutiques et en académie sur l\'ensemble du cycle de développement clinique — de l\'escalade de dose en Phase I aux essais pivotaux de Phase III. Mon expertise principale porte sur l\'oncologie et l\'hématologie, mais j\'apporte une méthodologie rigoureuse et une approche orientée résultats à toute aire thérapeutique.',
-    'about.p2': 'J\'ai contribué à des programmes de développement de référence chez Johnson &amp; Johnson (bispecifiques, un trispecifique et thérapies CAR-T pour le myélome multiple), Novartis (Scemblix/asciminib pour la LMC, ayant soutenu les approbations FDA et EMA), et Gustave Roussy, le plus grand centre de lutte contre le cancer en Europe. Dans ces rôles, j\'ai travaillé sur la conception des essais, le développement des protocols et des plans d\'analyses statistiques, les interactions réglementaires et la rédaction des rapports d\'étude selon les plus hauts standards scientifiques et réglementaires.',
-    'about.p3': 'Au-delà de la biostatistique classique, j\'applique le machine learning et l\'IA aux données cliniques et génomiques. Je suis co-inventeur d\'un brevet utilisant le ML pour prédire le pronostic dans le cancer du sein triple négatif, et auteur de plus de 15 publications évaluées par des pairs (plus de 1 200 citations) dans des revues telles que les Annals of Oncology, le JCO et Statistics in Medicine.',
-    'stat.years':        'Ans d\'expérience',
-    'stat.phases':       'Phases d\'essais',
-    'stat.publications': 'Publications',
-    'stat.citations':    'Citations',
-    'services.label': 'Services',
-    'services.title': 'Domaines d\'<em>expertise</em>',
-    'services.cta':   'Discutons de votre projet',
-    's1.title': 'Analyse Statistique &amp; Support Complet des Essais Cliniques',
-    's1.desc':  'Conception et analyse avancées d\'essais cliniques incluant les approches bayésiennes et les designs adaptatifs, calcul de taille d\'échantillon, déploiement des estimands, et rapports statistiques réglementaires (SAP, TLFs, CSRs).',
-    's2.title': 'Data Science, Machine Learning &amp; Intelligence Artificielle',
-    's2.desc':  'Analyse avancée de données cliniques, de données en vie réelle et de données en haute dimension — modélisation prédictive, pipelines reproductibles, et application du ML et de l\'IA à la découverte de biomarqueurs.',
+
+    // HOME — SECTION 1
+    'home.s1.label': 'Le fossé dont personne ne parle',
+    'home.s1.p1':    'Tout le monde recrute des data scientists et des ingénieurs pour développer l\'IA en santé. Presque personne ne sollicite ceux qui comprennent réellement les essais cliniques — les flux de travail, la logique réglementaire, les cas limites, les échanges avec les autorités de santé.',
+    'home.s1.p2':    'J\'ai passé 13 ans dans le développement de médicaments, de la recherche académique à Gustave Roussy aux programmes mondiaux chez Novartis et Johnson &amp; Johnson — thérapies CAR-T, anticorps bispécifiques, essais de Phase III pivotaux. J\'ai vu ce qui se passe lorsque l\'IA rencontre le développement clinique avec une expertise métier profonde, et sans elle. La différence n\'est pas subtile. C\'est la différence entre un produit qui passe le scrutin réglementaire et un qui ne le passe pas.',
+    'home.s1.p3':    'L\'IA clinique a besoin de spécialistes en essais cliniques — non comme validateurs en fin de parcours, mais comme architectes dès le début.',
+
+    // HOME — SECTION 2
+    'home.s2.label':     'Deux mondes. Un pont.',
+    'home.s2.p1':        'Il y a des personnes qui parlent couramment de biostatistiques, de conception d\'essais et de soumissions réglementaires — mais qui n\'ont jamais écrit une ligne de Python. Il y a des personnes qui construisent des pipelines de machine learning sophistiqués — mais qui n\'ont jamais lu un protocole ou un document de guidance FDA.',
+    'home.s2.highlight': 'BioSpark se trouve à cette intersection.',
+    'home.s2.p2':        'Si vous êtes une biotech, une entreprise pharmaceutique ou une PME dans le secteur de la santé à la recherche d\'un interlocuteur maîtrisant aussi bien la biostatistique et les soumissions réglementaires que Python, le machine learning et l\'infrastructure cloud — parlons-en.',
+
+    // ABOUT PAGE — SECTION 3
+    'about.label':         'À propos',
+    'about.page.name':     'Mohamed Amine Bayar, PhD',
+    'about.page.subtitle': 'Biostatisticien. Stratège en développement clinique. Praticien en IA/ML.',
+    'about.page.intro':    '13 ans sur l\'ensemble du cycle de développement clinique — de l\'escalade de dose en Phase I aux essais pivotaux de Phase III, de la rédaction des SAP aux interactions avec les autorités de santé.',
+    'about.where':         'Où j\'ai travaillé :',
+    'about.jnj.title':     'Johnson &amp; Johnson',
+    'about.jnj.desc':      'Biostatisticien principal sur les anticorps bispécifiques pour le myélome multiple, un anticorps trispécifique de première classe et les thérapies CAR-T. Conception et rapport d\'études pivotales dans l\'un des espaces les plus compétitifs de l\'oncologie.',
+    'about.novartis.title': 'Novartis',
+    'about.novartis.desc':  'Contributeur statistique principal au programme asciminib (Scemblix) pour la LMC, ayant soutenu les approbations marketing de la FDA et de l\'EMA.',
+    'about.gr.title':       'Gustave Roussy',
+    'about.gr.desc':        'Le plus grand centre de lutte contre le cancer en Europe. Recherche académique à l\'intersection de la biostatistique, de la génomique et des résultats cliniques.',
+    'about.apart':          'Ce qui me distingue :',
+    'about.apart.text':     'Co-inventeur d\'un brevet appliquant le machine learning pour prédire le pronostic dans le cancer du sein triple négatif. Auteur de 15+ publications évaluées par les pairs avec plus de 1 200 citations dans des revues incluant les Annals of Oncology, le JCO et Statistics in Medicine. Doctorat de l\'Université Paris-Saclay axé sur la conception d\'essais de Phase III dans les maladies rares et les sous-groupes définis par biomarqueurs.',
+    'about.apart.text2':    'Je n\'analyse pas seulement les données cliniques. Je comprends d\'où elles viennent, ce qu\'elles signifient cliniquement, et ce que les régulateurs ont besoin de voir.',
+    'about.cv':             'Télécharger le CV complet',
+    'stat.years':           'Ans d\'expérience',
+    'stat.phases':          'Phases d\'essais',
+    'stat.publications':    'Publications',
+    'stat.citations':       'Citations',
+
+    // SERVICES PAGE — SECTION 4
+    'services.label':      'Services',
+    'services.title':      'Domaines d\'<em>expertise</em>',
+    'services.what':       'Ce que nous proposons',
+    'services.tier1.label': 'Conseil stratégique',
+    'services.tier1.i1':   'Architecture de l\'IA clinique — intégration de l\'expertise métier dans les produits IA de santé, de la conception à la validation',
+    'services.tier1.i2':   'Conseil en conception d\'essais — designs adaptatifs, méthodes bayésiennes, cadre des estimands',
+    'services.tier1.i3':   'Stratégie réglementaire-statistique — pont entre la biostatistique et les attentes des autorités de santé (FDA, EMA)',
+    'services.tier2.label': 'Support opérationnel',
+    'services.tier2.i1':   'Biostatisticien intégré sur des programmes cliniques (Phases I–III)',
+    'services.tier2.i2':   'Plans d\'analyses statistiques, supervision de la programmation, rapports d\'études',
+    'services.tier2.i3':   'Standards CDISC, production des TLFs, livrables prêts pour la soumission',
+    'services.cta':        'Discutons de votre projet',
+
+    // CONTACT PAGE — SECTION 5 + FORM
     'contact.label': 'Contact',
     'contact.title': 'Travaillons <em>ensemble</em>',
-    'contact.sub':   'Disponible pour des missions de conseil en freelance, des collaborations sur des études cliniques et des projets de recherche.',
+    'contact.sub':   'Que vous ayez besoin d\'un partenaire stratégique pour façonner votre approche de l\'IA clinique ou d\'un biostatisticien senior pour renforcer votre équipe sur un programme en cours — je suis à une conversation de distance.',
     'contact.form':  'Formulaire de Contact',
     'form.name':     'Nom complet',
     'form.email':    'Adresse e-mail',
@@ -81,39 +155,77 @@ const translations = {
     'form.send':     'Envoyer',
     'form.success':  'Votre message a été envoyé. Je vous répondrai très prochainement.',
     'form.error':    'Veuillez remplir tous les champs.',
-    'footer.copy':   'Tous droits réservés'
+
+    // FOOTER
+    'footer.copy': 'Tous droits réservés'
   },
 
   ar: {
+    // NAV
+    'nav.home':     'الرئيسية',
     'nav.about':    'نبذة عني',
     'nav.services': 'الخدمات',
     'nav.contact':  'تواصل',
+
+    // HERO
     'hero.tag':     'إحصاء حيوي · تجارب سريرية · أورام وأمراض الدم · الذكاء الاصطناعي',
     'hero.name':    'محمّد أمين بيّار',
     'hero.title':   'دكتوراه — مستشار مستقل',
     'hero.tagline': '«في تقاطع التجارب السريرية والذكاء الاصطناعي.»',
     'hero.cta1':    'استعرض الخدمات',
     'hero.cta2':    'تواصل معي',
-    'hero.badge':   'إحصاء وذكاء اصطناعي',
-    'about.label':  'نبذة عني',
-    'about.title':  'إحصائي حيوي عند <em>تقاطع</em><br>التجارب السريرية والذكاء الاصطناعي',
-    'about.p1': 'إحصائي حيوي حاصل على درجة الدكتوراه، بخبرة تمتد لأكثر من 13 عامًا على امتداد دورة التطوير السريري الكاملة — من تصاعد الجرعات في المرحلة الأولى إلى التجارب المحورية في المرحلة الثالثة. تتمحور خبرتي الرئيسية حول علم الأورام وأمراض الدم، غير أنني أقدم منهجية واضحة في مجالات علاجية مختلفة.',
-    'about.p2': 'أسهمت في برامج تطوير أدوية بارزة في شركة جونسون آند جونسون (عوامل ثنائية ومثلثة الخصوصية وعلاجات CAR-T لمرض المايلوما المتعددة)، وشركة نوفارتيس (Scemblix/أسيمينيب لسرطان الدم النخاعي المزمن، دعمًا لاعتمادات FDA وEMA)، ومركز غوستاف روسي، أكبر مركز لعلاج السرطان في أوروبا. في هذه الأدوار، قمت بتصميم التجارب وتطوير خطط التحليل الإحصائي والتفاعلات التنظيمية وإعداد تقارير الدراسات النهائية وفق أعلى المعايير العلمية والتنظيمية.',
-    'about.p3': 'إلى جانب الإحصاء الحيوي الكلاسيكي، أطبّق تقنيات التعلم الآلي والذكاء الاصطناعي على البيانات السريرية والجينومية. أنا مشارك في اختراع براءة تستخدم التعلم الآلي للتنبؤ بالإنذار في سرطان الثدي، ومؤلف لأكثر من 15 ورقة بحثية محكّمة (أكثر من 1,200 استشهاد) في مجلات منها Annals of Oncology وJCO وStatistics in Medicine.',
-    'stat.years':        'سنوات الخبرة',
-    'stat.phases':       'مراحل التجارب',
-    'stat.publications': 'منشورات',
-    'stat.citations':    'استشهادات',
-    'services.label': 'الخدمات',
-    'services.title': 'مجالات <em>الخبرة</em>',
-    'services.cta':   'ناقش مشروعك',
-    's1.title': 'التحليل الإحصائي والدعم للتجارب السريرية',
-    's1.desc':  'تصميم وتحليل متقدم للتجارب السريرية يشمل الأساليب البايزية والتصاميم التكيفية، حساب حجم العينة، والتقارير الإحصائية التنظيمية (SAP، TLFs، CSRs).',
-    's2.title': 'علم البيانات والتعلم الآلي والذكاء الاصطناعي',
-    's2.desc':  'تحليل متقدم للبيانات السريرية والبيانات الواقعية والبيانات عالية الأبعاد — نمذجة تنبؤية، وتطبيق التعلم الآلي والذكاء الاصطناعي على اكتشاف المؤشرات الحيوية.',
+
+    // HOME — SECTION 1
+    'home.s1.label': 'الفجوة التي لا أحد يتحدث عنها',
+    'home.s1.p1':    'الجميع يستعين بعلماء البيانات والمهندسين لبناء الذكاء الاصطناعي في قطاع الرعاية الصحية. لكن لا أحد تقريباً يستعين بالأشخاص الذين يفهمون التجارب السريرية فعلاً — سير العمل، والمنطق التنظيمي، والحالات الحدية، والنقاشات مع السلطات الصحية.',
+    'home.s1.p2':    'أمضيت 13 عاماً في تطوير الأدوية، من البحث الأكاديمي في مركز غوستاف روسي إلى البرامج العالمية في نوفارتيس وجونسون آند جونسون — علاجات CAR-T، والأجسام المضادة ثنائية الخصوصية، وتجارب المرحلة الثالثة المحورية. رأيت ما يحدث حين يلتقي الذكاء الاصطناعي بالتطوير السريري مع خبرة مجالية عميقة، وما يحدث بدونها. الفرق ليس طفيفاً. إنه الفرق بين منتج يجتاز الفحص التنظيمي وآخر لا يجتازه.',
+    'home.s1.p3':    'الذكاء الاصطناعي السريري يحتاج إلى متخصصين في التجارب السريرية — ليس كمراجعين في نهاية المطاف، بل كمهندسين منذ البداية.',
+
+    // HOME — SECTION 2
+    'home.s2.label':     'عالمان. جسر واحد.',
+    'home.s2.p1':        'ثمة من يتحدث بطلاقة عن الإحصاء الحيوي وتصميم التجارب والتقديمات التنظيمية — لكنه لم يكتب سطراً واحداً من Python قط. وثمة من يبني خطوط أنابيب تعلم آلي متطورة — لكنه لم يطّلع على بروتوكول أو وثيقة توجيهية من FDA قط.',
+    'home.s2.highlight': '.BioSpark يقع عند هذا التقاطع',
+    'home.s2.p2':        'إن كنت شركة بيوتك، أو مؤسسة دوائية، أو منشأة صغيرة ومتوسطة في قطاع الرعاية الصحية تبحث عمن يجمع بين الإحصاء الحيوي والتقديمات التنظيمية من جهة، وPython والتعلم الآلي والبنية التحتية السحابية من جهة أخرى — فلنتحدث.',
+
+    // ABOUT PAGE — SECTION 3
+    'about.label':         'نبذة عني',
+    'about.page.name':     'محمّد أمين بيّار، دكتوراه',
+    'about.page.subtitle': 'إحصائي حيوي. استراتيجي في التطوير السريري. ممارس في الذكاء الاصطناعي والتعلم الآلي.',
+    'about.page.intro':    '13 عاماً على امتداد دورة التطوير السريري الكاملة — من تصاعد الجرعات في المرحلة الأولى إلى التجارب المحورية في المرحلة الثالثة، ومن صياغة خطط التحليل الإحصائي إلى التفاعلات مع السلطات الصحية.',
+    'about.where':         'أين عملت:',
+    'about.jnj.title':     'جونسون آند جونسون',
+    'about.jnj.desc':      'كبير الإحصائيين الحيويين على برامج المايلوما المتعددة بالأجسام المضادة ثنائية الخصوصية، وجسم مضاد ثلاثي الخصوصية فريد من نوعه، وعلاجات CAR-T. صمّم وأعدّ تقارير دراسات محورية في أحد أكثر مجالات الأورام تنافسية.',
+    'about.novartis.title': 'نوفارتيس',
+    'about.novartis.desc':  'مساهم إحصائي رئيسي في برنامج أسيمينيب (Scemblix) لسرطان الدم النخاعي المزمن، دعماً لاعتمادات التسويق الصادرة عن FDA وEMA.',
+    'about.gr.title':       'غوستاف روسي',
+    'about.gr.desc':        'أكبر مركز لعلاج السرطان في أوروبا. بحث أكاديمي عند تقاطع الإحصاء الحيوي وعلم الجينوم والنتائج السريرية.',
+    'about.apart':          'ما يميّزني:',
+    'about.apart.text':     'مشارك في اختراع براءة تطبّق التعلم الآلي للتنبؤ بالإنذار في سرطان الثدي سلبي المستقبلات الثلاثية. مؤلف لأكثر من 15 ورقة بحثية محكّمة بأكثر من 1,200 استشهاد في مجلات منها Annals of Oncology وJCO وStatistics in Medicine. دكتوراه من جامعة باريس-ساكليه تمحورت حول تصميم تجارب المرحلة الثالثة في الأمراض النادرة والمجموعات الفرعية المحددة بالمؤشرات الحيوية.',
+    'about.apart.text2':    'لا أحلّل البيانات السريرية فحسب. بل أفهم مصدرها، ودلالتها السريرية، وما يحتاج المنظمون إلى رؤيته.',
+    'about.cv':             'تحميل السيرة الذاتية الكاملة',
+    'stat.years':           'سنوات الخبرة',
+    'stat.phases':          'مراحل التجارب',
+    'stat.publications':    'منشورات',
+    'stat.citations':       'استشهادات',
+
+    // SERVICES PAGE — SECTION 4
+    'services.label':      'الخدمات',
+    'services.title':      'مجالات <em>الخبرة</em>',
+    'services.what':       'ما نقدّمه',
+    'services.tier1.label': 'الاستشارة الاستراتيجية',
+    'services.tier1.i1':   'هندسة الذكاء الاصطناعي السريري — دمج الخبرة المجالية في منتجات الذكاء الاصطناعي الصحي من التصميم إلى التحقق',
+    'services.tier1.i2':   'استشارات تصميم التجارب — التصاميم التكيفية، والأساليب البايزية، وأطر التقديرات',
+    'services.tier1.i3':   'الاستراتيجية التنظيمية الإحصائية — جسر بين الإحصاء الحيوي وتوقعات السلطات الصحية (FDA، EMA)',
+    'services.tier2.label': 'الدعم التشغيلي',
+    'services.tier2.i1':   'إحصائي حيوي متكامل ضمن البرامج السريرية (المراحل I–III)',
+    'services.tier2.i2':   'خطط التحليل الإحصائي، والإشراف على البرمجة، وإعداد تقارير الدراسات',
+    'services.tier2.i3':   'معايير CDISC، وإنتاج TLFs، والمستندات الجاهزة للتقديم',
+    'services.cta':        'ناقش مشروعك',
+
+    // CONTACT PAGE — SECTION 5 + FORM
     'contact.label': 'تواصل',
     'contact.title': 'لنعمل <em>معًا</em>',
-    'contact.sub':   'متاح لمهام الاستشارة المستقلة، والتعاون في الدراسات السريرية والمشاريع البحثية.',
+    'contact.sub':   'سواء احتجت إلى شريك استراتيجي لتشكيل نهجك في الذكاء الاصطناعي السريري، أو إلى إحصائي حيوي أول لتعزيز فريقك في برنامج جارٍ — أنا على بُعد محادثة واحدة.',
     'contact.form':  'نموذج الاتصال',
     'form.name':     'الاسم الكامل',
     'form.email':    'البريد الإلكتروني',
@@ -121,7 +233,9 @@ const translations = {
     'form.send':     'إرسال',
     'form.success':  'تم إرسال رسالتك. سأرد عليك في أقرب وقت.',
     'form.error':    'يرجى ملء جميع الحقول.',
-    'footer.copy':   'جميع الحقوق محفوظة'
+
+    // FOOTER
+    'footer.copy': 'جميع الحقوق محفوظة'
   }
 };
 
@@ -131,45 +245,43 @@ function setLang(lang) {
   currentLang = lang;
   localStorage.setItem('biospark_lang', lang);
 
+  // Update html lang + dir attributes
+  const t = translations[lang];
+  document.documentElement.lang = lang;
+  document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
+
   // Update active button
   document.querySelectorAll('.lang-btn').forEach(btn => {
     btn.classList.toggle('active', btn.textContent.toLowerCase() === lang);
   });
 
-  // Update innerHTML elements
+  // Update all data-i18n elements
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
-    if (translations[lang] && translations[lang][key] !== undefined) {
-      el.innerHTML = translations[lang][key];
-    }
+    if (t[key] !== undefined) el.innerHTML = t[key];
   });
 
-  // Update placeholder attributes
+  // Update placeholder translations
   document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
     const key = el.getAttribute('data-i18n-placeholder');
-    if (translations[lang] && translations[lang][key] !== undefined) {
-      el.placeholder = translations[lang][key];
-    }
+    if (t[key] !== undefined) el.placeholder = t[key];
   });
-
-  // Set lang and direction
-  document.documentElement.lang = lang;
-  document.documentElement.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
 }
 
-// Restore language on page load
+// On page load, restore saved language
 document.addEventListener('DOMContentLoaded', () => {
   const saved = localStorage.getItem('biospark_lang') || 'en';
   setLang(saved);
+
+  // Scroll reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 });
-
-// Scroll reveal
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry, i) => {
-    if (entry.isIntersecting) {
-      setTimeout(() => entry.target.classList.add('visible'), i * 120);
-    }
-  });
-}, { threshold: 0.1 });
-
-document.querySelectorAll('.reveal').forEach(el => observer.observe(el));

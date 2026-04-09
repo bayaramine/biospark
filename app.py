@@ -2,7 +2,7 @@ import sqlite3
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
-from flask import Flask, render_template, request, redirect, url_for, flash
+from flask import Flask, render_template, request, redirect, url_for, flash, send_file
 from dotenv import load_dotenv
 import os
 
@@ -101,6 +101,14 @@ def index():
                            active_page='home')
 
 
+@app.route('/about')
+def about():
+    record_visit()
+    return render_template('about.html',
+                           visit_count=get_visit_count(),
+                           active_page='about')
+
+
 @app.route('/services')
 def services():
     record_visit()
@@ -138,6 +146,14 @@ def contact():
     return render_template('contact.html',
                            visit_count=get_visit_count(),
                            active_page='contact')
+
+
+@app.route('/cv')
+def download_cv():
+    """Serve CV PDF for download"""
+    cv_path = os.path.join(os.path.dirname(__file__), 'CV.pdf')
+    return send_file(cv_path, as_attachment=True,
+                     download_name='MohamedAmineBayar_CV.pdf')
 
 
 if __name__ == '__main__':

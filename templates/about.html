@@ -1,0 +1,67 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<div style="position:relative;z-index:1;">
+<section id="about">
+  <div class="section-label" data-i18n="about.label">About</div>
+  <h2 class="section-title reveal" data-i18n="about.page.name">Mohamed Amine Bayar, PhD</h2>
+  <p class="about-page-subtitle reveal" data-i18n="about.page.subtitle">Biostatistician. Clinical development strategist. AI/ML practitioner.</p>
+  <p class="about-page-intro reveal" data-i18n="about.page.intro">13 years across the full clinical development lifecycle — from Phase I dose escalation to Phase III pivotal trials, from SAP authorship to health authority interactions.</p>
+
+  <!-- STAT CARDS -->
+  <div class="about-stats reveal">
+    <div class="stat-card">
+      <div class="stat-num">13+</div>
+      <div class="stat-desc" data-i18n="stat.years">Years of Experience</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">I–IV</div>
+      <div class="stat-desc" data-i18n="stat.phases">Trial Phases</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">15+</div>
+      <div class="stat-desc" data-i18n="stat.publications">Publications</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">1,200+</div>
+      <div class="stat-desc" data-i18n="stat.citations">Citations</div>
+    </div>
+  </div>
+
+  <!-- WORK HISTORY -->
+  <div class="work-history reveal">
+    <div class="work-where-label" data-i18n="about.where">Where I've worked:</div>
+
+    <div class="work-item">
+      <div class="work-company" data-i18n="about.jnj.title">Johnson &amp; Johnson</div>
+      <div class="work-desc" data-i18n="about.jnj.desc">Lead biostatistician on multiple myeloma bispecifics, a first-in-class trispecific antibody, and CAR-T therapies. Designed and reported pivotal studies in one of the most competitive spaces in oncology.</div>
+    </div>
+
+    <div class="work-item">
+      <div class="work-company" data-i18n="about.novartis.title">Novartis</div>
+      <div class="work-desc" data-i18n="about.novartis.desc">Core statistical contributor to the asciminib (Scemblix) program for CML, supporting both FDA and EMA marketing approvals.</div>
+    </div>
+
+    <div class="work-item">
+      <div class="work-company" data-i18n="about.gr.title">Gustave Roussy</div>
+      <div class="work-desc" data-i18n="about.gr.desc">Europe's largest cancer center. Academic research at the intersection of biostatistics, genomics, and clinical outcomes.</div>
+    </div>
+  </div>
+
+  <!-- WHAT SETS ME APART -->
+  <div class="apart-section reveal">
+    <div class="apart-label" data-i18n="about.apart">What sets me apart:</div>
+    <p class="apart-text" data-i18n="about.apart.text">Co-inventor of a patent applying machine learning to predict prognosis in triple-negative breast cancer. Author of 15+ peer-reviewed publications with over 1,200 citations in journals including the Annals of Oncology, JCO, and Statistics in Medicine. PhD from Université Paris-Saclay focused on Phase III trial design in rare diseases and biomarker-defined subgroups.</p>
+    <p class="apart-text" data-i18n="about.apart.text2">I don't just analyze clinical data. I understand where it comes from, what it means clinically, and what regulators need to see.</p>
+  </div>
+
+  <!-- CV DOWNLOAD -->
+  <div class="cv-download-row reveal">
+    <a href="/cv" class="btn-outline" data-i18n="about.cv">Download full CV</a>
+  </div>
+
+</section>
+</div>
+
+{% endblock %}
