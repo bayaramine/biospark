@@ -15,7 +15,7 @@ const translations = {
     'hero.tag':     'Biostatistics · Clinical Trials · Oncology &amp; Hematology · AI/ML',
     'hero.name':    'BioSpark',
     'hero.title':   'Clinical Intelligence. Regulatory Precision.',
-    'hero.tagline': '"Bridging clinical trials and artificial intelligence."',
+    'hero.tagline': 'Bridging clinical trials and artificial intelligence.',
 
     // HOME — SECTION 1
     'home.s1.label': 'The gap no one is talking about',
@@ -32,7 +32,7 @@ const translations = {
     // ABOUT PAGE — SECTION 3
     'about.label':         'About',
     'about.page.name':     'Mohamed Amine Bayar, PhD',
-    'about.page.subtitle': 'Biostatistician. Clinical development strategist. AI/ML practitioner.',
+    'about.page.subtitle': 'Biostatistician. Clinical development. AI/ML practitioner.',
     'about.page.intro':    '13 years across the full clinical development lifecycle — from Phase I dose escalation to Phase III pivotal trials, from SAP authorship to health authority interactions.',
     'about.where':         'Where I\'ve worked:',
     'about.jnj.title':     'Johnson &amp; Johnson',
@@ -52,22 +52,24 @@ const translations = {
 
     // SERVICES PAGE — SECTION 4
     'services.label':      'Services',
-    'services.title':      'Areas of <em>expertise</em>',
+    'services.title':      'Areas of expertise',
     'services.what':       'What we do',
     'services.tier1.label': 'Strategic advisory',
-    'services.tier1.i1':   'Clinical AI architecture — embedding domain expertise into healthcare AI products from design to validation',
-    'services.tier1.i2':   'Trial design consulting — adaptive designs, Bayesian methods, estimand frameworks',
-    'services.tier1.i3':   'Regulatory-statistical strategy — bridging biostatistics and health authority expectations (FDA, EMA)',
+    'services.tier1.i1':   'Clinical AI design — bringing clinical trial expertise into AI products, from concept to regulatory validation',
+    'services.tier1.i2':   'Trial design — adaptive, Bayesian, and estimand-driven strategies for complex development programs',
+    'services.tier1.i3':   'Regulatory strategy — aligning statistical methodology with FDA and EMA expectations from the start',
     'services.tier2.label': 'Operational support',
-    'services.tier2.i1':   'Embedded biostatistician on clinical programs (Phase I–III)',
-    'services.tier2.i2':   'Statistical analysis plans, programming oversight, study reporting',
-    'services.tier2.i3':   'CDISC standards, TLF production, submission-ready deliverables',
+    'services.tier2.i1':   'Full-embedded statistical support across Phase I–III programs',
+    'services.tier2.i2':   'SAP authorship, programming oversight, and study-level reporting',
+    'services.tier2.i3':   'CDISC-compliant datasets, TLF production, and submission-ready packages',
     'services.cta':        'Discuss Your Project',
 
     // CONTACT PAGE — SECTION 5 + FORM
     'contact.label': 'Contact',
-    'contact.title': 'Let\'s work <em>together</em>',
+    'contact.title': 'Let\'s work together',
     'contact.sub':   'Whether you need a strategic partner to shape your clinical AI approach or a senior biostatistician to strengthen your team on an ongoing program — I\'m one conversation away.',
+    'contact.address.label': 'Address',
+    'contact.phone.label':   'Phone',
     'contact.form':  'Contact Form',
     'form.name':     'Full name',
     'form.email':    'Email address',
@@ -91,7 +93,7 @@ const translations = {
     'hero.tag':     'Biostatistiques · Essais Cliniques · Oncologie &amp; Hématologie · IA/ML',
     'hero.name':    'BioSpark',
     'hero.title':   'Intelligence Clinique. Précision Réglementaire.',
-    'hero.tagline': '« À l\'intersection des essais cliniques et de l\'intelligence artificielle. »',
+    'hero.tagline': 'À l\'intersection des essais cliniques et de l\'intelligence artificielle.',
 
     // HOME — SECTION 1
     'home.s1.label': 'Le fossé dont personne ne parle',
@@ -108,7 +110,7 @@ const translations = {
     // ABOUT PAGE — SECTION 3
     'about.label':         'À propos',
     'about.page.name':     'Mohamed Amine Bayar, PhD',
-    'about.page.subtitle': 'Biostatisticien. Stratège en développement clinique. Praticien en IA/ML.',
+    'about.page.subtitle': 'Biostatisticien. Développement clinique. Praticien en IA/ML.',
     'about.page.intro':    '13 ans sur l\'ensemble du cycle de développement clinique — de l\'escalade de dose en Phase I aux essais pivotaux de Phase III, de la rédaction des SAP aux interactions avec les autorités de santé.',
     'about.where':         'Où j\'ai travaillé :',
     'about.jnj.title':     'Johnson &amp; Johnson',
@@ -128,22 +130,24 @@ const translations = {
 
     // SERVICES PAGE — SECTION 4
     'services.label':      'Services',
-    'services.title':      'Domaines d\'<em>expertise</em>',
+    'services.title':      'Domaines d\'expertise',
     'services.what':       'Ce que nous proposons',
     'services.tier1.label': 'Conseil stratégique',
-    'services.tier1.i1':   'Architecture de l\'IA clinique — intégration de l\'expertise métier dans les produits IA de santé, de la conception à la validation',
-    'services.tier1.i2':   'Conseil en conception d\'essais — designs adaptatifs, méthodes bayésiennes, cadre des estimands',
-    'services.tier1.i3':   'Stratégie réglementaire-statistique — pont entre la biostatistique et les attentes des autorités de santé (FDA, EMA)',
+    'services.tier1.i1':   'Conception d\'IA clinique — apporter l\'expertise des essais cliniques aux produits IA, du concept à la validation réglementaire',
+    'services.tier1.i2':   'Conception d\'essais — stratégies adaptatives, bayésiennes et fondées sur les estimands pour des programmes complexes',
+    'services.tier1.i3':   'Stratégie réglementaire — aligner la méthodologie statistique avec les attentes FDA et EMA dès le départ',
     'services.tier2.label': 'Support opérationnel',
-    'services.tier2.i1':   'Biostatisticien intégré sur des programmes cliniques (Phases I–III)',
-    'services.tier2.i2':   'Plans d\'analyses statistiques, supervision de la programmation, rapports d\'études',
-    'services.tier2.i3':   'Standards CDISC, production des TLFs, livrables prêts pour la soumission',
+    'services.tier2.i1':   'Support statistique intégré sur l\'ensemble des programmes Phase I–III',
+    'services.tier2.i2':   'Rédaction des SAP, supervision de la programmation et rapports au niveau des études',
+    'services.tier2.i3':   'Données conformes CDISC, production des TLFs et soumissions prêtes à l\'envoi',
     'services.cta':        'Discutons de votre projet',
 
     // CONTACT PAGE — SECTION 5 + FORM
     'contact.label': 'Contact',
-    'contact.title': 'Travaillons <em>ensemble</em>',
+    'contact.title': 'Travaillons ensemble',
     'contact.sub':   'Que vous ayez besoin d\'un partenaire stratégique pour façonner votre approche de l\'IA clinique ou d\'un biostatisticien senior pour renforcer votre équipe sur un programme en cours — je suis à une conversation de distance.',
+    'contact.address.label': 'Adresse',
+    'contact.phone.label':   'Téléphone',
     'contact.form':  'Formulaire de Contact',
     'form.name':     'Nom complet',
     'form.email':    'Adresse e-mail',
@@ -167,7 +171,7 @@ const translations = {
     'hero.tag':     'إحصاء حيوي · تجارب سريرية · أورام وأمراض الدم · الذكاء الاصطناعي',
     'hero.name':    'BioSpark',
     'hero.title':   'ذكاء سريري. دقة تنظيمية.',
-    'hero.tagline': '«في تقاطع التجارب السريرية والذكاء الاصطناعي.»',
+    'hero.tagline': 'في تقاطع التجارب السريرية والذكاء الاصطناعي.',
 
     // HOME — SECTION 1
     'home.s1.label': 'الفجوة التي لا أحد يتحدث عنها',
@@ -184,7 +188,7 @@ const translations = {
     // ABOUT PAGE — SECTION 3
     'about.label':         'نبذة عني',
     'about.page.name':     'محمّد أمين بيّار، دكتوراه',
-    'about.page.subtitle': 'إحصائي حيوي. استراتيجي في التطوير السريري. ممارس في الذكاء الاصطناعي والتعلم الآلي.',
+    'about.page.subtitle': 'إحصائي حيوي. تطوير سريري. ممارس في الذكاء الاصطناعي والتعلم الآلي.',
     'about.page.intro':    '13 عاماً على امتداد دورة التطوير السريري الكاملة — من تصاعد الجرعات في المرحلة الأولى إلى التجارب المحورية في المرحلة الثالثة، ومن صياغة خطط التحليل الإحصائي إلى التفاعلات مع السلطات الصحية.',
     'about.where':         'أين عملت:',
     'about.jnj.title':     'جونسون آند جونسون',
@@ -204,22 +208,24 @@ const translations = {
 
     // SERVICES PAGE — SECTION 4
     'services.label':      'الخدمات',
-    'services.title':      'مجالات <em>الخبرة</em>',
+    'services.title':      'مجالات الخبرة',
     'services.what':       'ما نقدّمه',
     'services.tier1.label': 'الاستشارة الاستراتيجية',
-    'services.tier1.i1':   'هندسة الذكاء الاصطناعي السريري — دمج الخبرة المجالية في منتجات الذكاء الاصطناعي الصحي من التصميم إلى التحقق',
-    'services.tier1.i2':   'استشارات تصميم التجارب — التصاميم التكيفية، والأساليب البايزية، وأطر التقديرات',
-    'services.tier1.i3':   'الاستراتيجية التنظيمية الإحصائية — جسر بين الإحصاء الحيوي وتوقعات السلطات الصحية (FDA، EMA)',
+    'services.tier1.i1':   'تصميم الذكاء الاصطناعي السريري — توظيف خبرة التجارب السريرية في منتجات الذكاء الاصطناعي، من المفهوم إلى التحقق التنظيمي',
+    'services.tier1.i2':   'تصميم التجارب — استراتيجيات تكيفية وبايزية قائمة على الاستيمند للبرامج المعقدة',
+    'services.tier1.i3':   'الاستراتيجية التنظيمية — مواءمة المنهجية الإحصائية مع متطلبات FDA وEMA منذ البداية',
     'services.tier2.label': 'الدعم التشغيلي',
-    'services.tier2.i1':   'إحصائي حيوي متكامل ضمن البرامج السريرية (المراحل I–III)',
-    'services.tier2.i2':   'خطط التحليل الإحصائي، والإشراف على البرمجة، وإعداد تقارير الدراسات',
-    'services.tier2.i3':   'معايير CDISC، وإنتاج TLFs، والمستندات الجاهزة للتقديم',
+    'services.tier2.i1':   'دعم إحصائي متكامل عبر برامج المراحل I–III',
+    'services.tier2.i2':   'صياغة خطط التحليل الإحصائي، والإشراف على البرمجة، وإعداد التقارير',
+    'services.tier2.i3':   'بيانات متوافقة مع CDISC، وإنتاج TLFs، وحزم جاهزة للتقديم',
     'services.cta':        'ناقش مشروعك',
 
     // CONTACT PAGE — SECTION 5 + FORM
     'contact.label': 'تواصل',
-    'contact.title': 'لنعمل <em>معًا</em>',
+    'contact.title': 'لنعمل معًا',
     'contact.sub':   'سواء احتجت إلى شريك استراتيجي لتشكيل نهجك في الذكاء الاصطناعي السريري، أو إلى إحصائي حيوي أول لتعزيز فريقك في برنامج جارٍ — أنا على بُعد محادثة واحدة.',
+    'contact.address.label': 'العنوان',
+    'contact.phone.label':   'الهاتف',
     'contact.form':  'نموذج الاتصال',
     'form.name':     'الاسم الكامل',
     'form.email':    'البريد الإلكتروني',
