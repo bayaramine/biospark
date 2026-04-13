@@ -12,7 +12,7 @@ BioSpark is a trilingual, multipage professional consulting website built with P
 
 The site positions BioSpark as a boutique consulting firm at the intersection of clinical trial methodology and artificial intelligence. The target audience includes biotech companies, pharmaceutical firms, and healthcare startups looking for senior biostatistical expertise. The website is designed to reflect the precision and rigor of the field it represents — minimal, typographically strong, and content-driven.
 
-The live site is accessible at: [bayaramine.pythonanywhere.com](https://bayaramine.pythonanywhere.com)
+The live site is accessible at: https://mohamedaminebayar.pythonanywhere.com/
 
 ---
 
@@ -69,7 +69,7 @@ Lists the two Python dependencies: `Flask>=3.0.0` and `python-dotenv>=1.0.0`.
 
 **SQLite over a hosted database.** For a personal consulting site, SQLite is entirely sufficient. It requires no external service, no credentials beyond the file path, and it is trivial to migrate. Contact form submissions are low volume by nature. PostgreSQL would have been overengineering for this use case.
 
-**Multipage Flask over a single-page application.** Separate routes (`/`, `/about`, `/services`, `/contact`) make the URL structure meaningful and bookmarkable. It also keeps each template focused and readable. A single-page JavaScript-rendered app would have added unnecessary complexity without a meaningful user experience benefit for a content-driven site.
+**Multipage Flask over a single-page application.** Separate routes (`/`, `/about`, `/services`, `/contact`) make the URL structure meaningful and bookmarkable. It also keeps each template focused and readable. A single-page JavaScript-rendered app would have added unnecessary complexity without a meaningful user experience benefit for a content-driven site. This is the most important and impactful design descision I made.
 
 **CSS variables for theming.** Using `--accent`, `--bg`, `--card`, etc. as root-level variables means the entire color scheme can be changed in one place. Dark mode is a simple variable override in a media query — no class toggling, no JavaScript, no flash of incorrect theme on load.
 
