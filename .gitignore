@@ -14,6 +14,13 @@ instance/
 # Database
 biospark.db
 
-# Personal files — do not publish (root copies only)
+# Personal files
 /CV.pdf
 /portrait.jpg
+
+# Claude Code config
+.claude/
+
+# Old files
+biospark.html
+biospark_project_plan.md
