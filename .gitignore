@@ -15,7 +15,6 @@ instance/
 biospark.db
 
 # Personal files
-/CV.pdf
 /portrait.jpg
 
 # Claude Code config
