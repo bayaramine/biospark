@@ -151,7 +151,7 @@ def contact():
 @app.route('/cv')
 def download_cv():
     """Redirect to CV PDF hosted on GitHub"""
-    return redirect('https://github.com/bayaramine/biospark/raw/master/CV.pdf')
+    return redirect('https://github.com/bayaramine/cv-biospark/raw/master/CV.pdf')
 
 
 if __name__ == '__main__':
