@@ -2,7 +2,7 @@ import sqlite3
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
-from flask import Flask, render_template, request, redirect, url_for, flash, send_file
+from flask import Flask, render_template, request, redirect, url_for, flash
 from dotenv import load_dotenv
 import os
 
@@ -150,10 +150,8 @@ def contact():
 
 @app.route('/cv')
 def download_cv():
-    """Serve CV PDF for download"""
-    cv_path = os.path.join(os.path.dirname(__file__), 'CV.pdf')
-    return send_file(cv_path, as_attachment=True,
-                     download_name='MohamedAmineBayar_CV.pdf')
+    """Redirect to CV PDF hosted on GitHub"""
+    return redirect('https://github.com/bayaramine/biospark/raw/master/CV.pdf')
 
 
 if __name__ == '__main__':
