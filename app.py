@@ -1,5 +1,7 @@
 import sqlite3
 import smtplib
+import time
+from collections import defaultdict
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from flask import Flask, render_template, request, redirect, url_for, flash, send_from_directory
@@ -18,6 +20,38 @@ DATABASE = 'biospark.db'
 GMAIL_ADDRESS = os.getenv('GMAIL_ADDRESS')
 GMAIL_APP_PASSWORD = os.getenv('GMAIL_APP_PASSWORD')
 RECIPIENT_EMAIL = os.getenv('RECIPIENT_EMAIL')
+
+# Rate limiting: max 3 submissions per IP per hour
+_rate_limit = defaultdict(list)
+RATE_LIMIT_MAX = 3
+RATE_LIMIT_WINDOW = 3600  # seconds
+
+# Spam keyword filter (case-insensitive)
+SPAM_KEYWORDS = [
+    '1st page', 'first page', 'ranking on google', 'seo', 'search engine optimization',
+    'free proposal', 'free seo', 'backlink', 'rank your website', 'rank your site',
+    'google ranking', 'page ranking', 'digital marketing', 'lead generation',
+    'toll free', 'wa.me', 'whatsapp', 'crypto', 'bitcoin', 'investment opportunity',
+    'make money', 'passive income', 'work from home', 'click here', 'limited offer',
+    'act now', 'congratulations you', 'you have been selected',
+]
+
+
+def is_spam(message, name, email):
+    """Return True if the submission looks like spam."""
+    combined = (message + ' ' + name + ' ' + email).lower()
+    return any(kw in combined for kw in SPAM_KEYWORDS)
+
+
+def is_rate_limited(ip):
+    """Return True if this IP has exceeded the submission limit."""
+    now = time.time()
+    # Keep only timestamps within the window
+    _rate_limit[ip] = [t for t in _rate_limit[ip] if now - t < RATE_LIMIT_WINDOW]
+    if len(_rate_limit[ip]) >= RATE_LIMIT_MAX:
+        return True
+    _rate_limit[ip].append(now)
+    return False
 
 
 def get_db():
@@ -122,11 +156,32 @@ def services():
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():
     if request.method == 'POST':
+        # Honeypot check — bots fill the hidden 'website' field, humans don't
+        honeypot = request.form.get('website', '')
+        if honeypot:
+            # Silent drop: show success to the bot, do nothing
+            flash('success')
+            return redirect(url_for('contact'))
+
         name    = request.form.get('name', '').strip()
         email   = request.form.get('email', '').strip()
         message = request.form.get('message', '').strip()
 
         if name and email and message:
+            ip = request.headers.get('X-Forwarded-For', request.remote_addr).split(',')[0].strip()
+
+            # Rate limit check
+            if is_rate_limited(ip):
+                print(f"Rate limit hit from {ip}")
+                flash('success')  # silent drop
+                return redirect(url_for('contact'))
+
+            # Spam keyword check
+            if is_spam(message, name, email):
+                print(f"Spam detected from {email}: {message[:80]}")
+                flash('success')  # silent drop
+                return redirect(url_for('contact'))
+
             # Save to database
             db = get_db()
             db.execute(
